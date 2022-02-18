@@ -15,6 +15,7 @@ using Windows.Foundation.Collections;
 using Microsoft.UI.Xaml.Media.Animation;
 using muxc = Microsoft.UI.Xaml.Controls;
 using LetsGoDexTracker.ViewModels;
+using LetsGoDexTracker.Views;
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
 
@@ -49,7 +50,7 @@ namespace LetsGoDexTracker
                 Icon = new SymbolIcon((Symbol)0xE10F),
                 Tag = "home"
             });
-            _pages.Add(("home", typeof(MainWindow)));
+            _pages.Add(("home", typeof(Home)));
             Nav.MenuItems.Add(new muxc.NavigationViewItemSeparator());
             Nav.MenuItems.Add(new muxc.NavigationViewItem
             {
@@ -57,7 +58,7 @@ namespace LetsGoDexTracker
                 Icon = new SymbolIcon((Symbol)0xE113),
                 Tag = "dex"
             });
-            _pages.Add(("dex", typeof(MainWindow)));
+            _pages.Add(("dex", typeof(MyDex)));
             Nav.MenuItems.Add(new muxc.NavigationViewItemSeparator());
             Nav.MenuItems.Add(new muxc.NavigationViewItem
             {
@@ -65,9 +66,14 @@ namespace LetsGoDexTracker
                 Icon = new SymbolIcon((Symbol)0xE11B),
                 Tag = "about"
             });
-            _pages.Add(("About", typeof(MainWindow)));
+            _pages.Add(("about", typeof(About)));
             Nav.MenuItems.Add(new muxc.NavigationViewItemSeparator());
+            ContentFrame.Navigated += On_Navigated;
 
+            // NavView doesn't load any page by default, so load home page.
+            Nav.SelectedItem = Nav.MenuItems[0];
+            NavigationView_Navigate("home", new Microsoft.UI.Xaml.Media.Animation.EntranceNavigationTransitionInfo());
+            
         }
         private void NavigationView_ItemInvoked(muxc.NavigationView sender,
                               muxc.NavigationViewItemInvokedEventArgs args)
@@ -87,7 +93,7 @@ namespace LetsGoDexTracker
             Type _page = null;
             if (navItemTag == "settings")
             {
-                _page = typeof(SettingsPage);
+                _page = typeof(Settings);
             }
             else
             {
@@ -125,15 +131,38 @@ namespace LetsGoDexTracker
         {
             throw new Exception("Failed to load Page " + e.SourcePageType.FullName);
         }
+        private void On_Navigated(object sender, NavigationEventArgs e)
+        {
+            Nav.IsBackEnabled = ContentFrame.CanGoBack;
+
+            if (ContentFrame.SourcePageType == typeof(Settings))
+            {
+                // SettingsItem is not part of NavView.MenuItems, and doesn't have a Tag.
+                Nav.SelectedItem = (muxc.NavigationViewItem)Nav.SettingsItem;
+                Nav.Header = "Settings";
+            }
+            else if (ContentFrame.SourcePageType != null)
+            {
+                var item = _pages.FirstOrDefault(p => p.Page == e.SourcePageType);
+
+                Nav.SelectedItem = Nav.MenuItems
+                    .OfType<muxc.NavigationViewItem>()
+                    .First(n => n.Tag.Equals(item.Tag));
+
+                Nav.Header =
+                    ((muxc.NavigationViewItem)Nav.SelectedItem)?.Content?.ToString();
+            }
+        }
+        private void NavView_BackRequested(muxc.NavigationView sender, muxc.NavigationViewBackRequestedEventArgs args)
+        {
+            TryGoBack();
+        }
     }
 
 
 
 
-    internal class SettingsPage { }
-
-    internal class DexPage { }
-    internal class AboutPage { }
+   
 
 }
 

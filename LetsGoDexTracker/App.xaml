@@ -11,10 +11,21 @@
                 <ResourceDictionary>
                     <ResourceDictionary.ThemeDictionaries>
                         <ResourceDictionary x:Key="Default">
-
-                            <muxm:AcrylicBrush x:Key="NavigationViewTopPaneBackground"      
-                             TintColor="DarkViolet" TintOpacity=".3"/>
-
+                            <LinearGradientBrush x:Key="NavigationViewTopPaneBackground"
+                                     StartPoint="0.5,0" EndPoint="0.5,1">
+                                <GradientStop Color="Firebrick" Offset="0.0" />
+                                <GradientStop Color="Snow" Offset="1.0" />
+                            </LinearGradientBrush>
+                            <LinearGradientBrush x:Key="NavigationViewExpandedPaneBackground"
+                                     StartPoint="0.5,0" EndPoint="0.5,1">
+                                <GradientStop Color="Firebrick" Offset="0.0" />
+                                <GradientStop Color="Snow" Offset="1.0" />
+                            </LinearGradientBrush>
+                            <LinearGradientBrush x:Key="NavigationViewDefaultPaneBackground"
+                                     StartPoint="0.5,0" EndPoint="0.5,1">
+                                <GradientStop Color="Firebrick" Offset="0.0" />
+                                <GradientStop Color="Snow" Offset="1.0" />
+                            </LinearGradientBrush>
                         </ResourceDictionary>
                         <ResourceDictionary x:Key="HighContrast">
 

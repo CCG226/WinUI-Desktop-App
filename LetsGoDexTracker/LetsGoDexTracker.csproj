@@ -13,6 +13,10 @@
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Assets\Square44x44Logo.targetsize-48.png" />
+    <None Remove="Views\About.xaml" />
+    <None Remove="Views\Home.xaml" />
+    <None Remove="Views\MyDex.xaml" />
+    <None Remove="Views\Settings.xaml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -39,5 +43,25 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Service\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\About.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\Home.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\Settings.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\MyDex.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
 </Project>
