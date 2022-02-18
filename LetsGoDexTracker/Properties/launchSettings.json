@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "LetsGoDexTracker (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "LetsGoDexTracker (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
