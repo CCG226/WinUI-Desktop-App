@@ -139,7 +139,7 @@ namespace LetsGoDexTracker
             {
                 // SettingsItem is not part of NavView.MenuItems, and doesn't have a Tag.
                 Nav.SelectedItem = (muxc.NavigationViewItem)Nav.SettingsItem;
-                Nav.Header = "Settings";
+              
             }
             else if (ContentFrame.SourcePageType != null)
             {
@@ -149,8 +149,7 @@ namespace LetsGoDexTracker
                     .OfType<muxc.NavigationViewItem>()
                     .First(n => n.Tag.Equals(item.Tag));
 
-                Nav.Header =
-                    ((muxc.NavigationViewItem)Nav.SelectedItem)?.Content?.ToString();
+           
             }
         }
         private void NavView_BackRequested(muxc.NavigationView sender, muxc.NavigationViewBackRequestedEventArgs args)

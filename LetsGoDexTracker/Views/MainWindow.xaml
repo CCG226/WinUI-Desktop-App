@@ -15,7 +15,7 @@
                          Loaded="NavigationView_Loaded"
                          ItemInvoked="NavigationView_ItemInvoked"
                          BackRequested="NavigationView_BackRequested"
-                        PaneDisplayMode="LeftCompact">
+                        PaneDisplayMode="Top">
 
 
 
