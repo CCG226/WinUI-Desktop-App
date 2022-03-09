@@ -13,8 +13,8 @@
             <ColumnDefinition Width="600">
             </ColumnDefinition>
         </Grid.ColumnDefinitions>
-
-        <Image Source="/Assets/kanto.png" MinHeight="100" MinWidth="100" MaxHeight="425" MaxWidth="425" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,51,0,0"/>
+        <!--<Image Source="/Art/600px-151Mew.png"/> -->
+        <Image Source="/Chart/1.png" MinHeight="100" MinWidth="100" MaxHeight="425" MaxWidth="425" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,51,0,0"/>
         <TextBlock HorizontalAlignment="Left" Height="36" Margin="100,10,0,0" TextWrapping="Wrap" Text="Interactive Map Of Kanto:" VerticalAlignment="Top" Width="245" SelectionChanged="TextBlock_SelectionChanged" />
         <TextBlock Height="29" Margin="691,10,-356,0" TextWrapping="Wrap" Text="Available Pokemon in Kanto:" VerticalAlignment="Top" RenderTransformOrigin="0.497,0.457" SelectionChanged="TextBlock_SelectionChanged_1"/>
         <Button Content="" Height="25" Margin="100,90,0,0" VerticalAlignment="Top" Width="23" Opacity="0" ToolTipService.ToolTip="Indigo Plateau"/>
