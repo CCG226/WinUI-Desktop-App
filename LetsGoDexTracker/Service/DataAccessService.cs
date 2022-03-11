@@ -25,7 +25,7 @@ namespace LetsGoDexTracker.Service
                 SqliteDataReader query = insert.ExecuteReader();
                 while(query.Read())
                 {
-                  Dex.Add(new Pokemon() { Id =query.GetInt16(0)});
+                    Dex.Add(new Pokemon() { Id = query.GetInt16(0) });
                 }
              
                 db.Close();
