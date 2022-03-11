@@ -11,21 +11,29 @@ using Windows.Storage;
 
 namespace LetsGoDexTracker.Service
 {
+
     public class DataAccessService
     {
+        public async static void IntializeData()
+        {
+            await ApplicationData.Current.LocalFolder.CreateFileAsync("NationalPokedex.db", CreationCollisionOption.OpenIfExists);
+
+        }
         public static List<Pokemon> DataAccess()
         {
+         
             List<Pokemon> Dex = new List<Pokemon>();
+            
             string dbpath = Path.Combine(ApplicationData.Current.LocalFolder.Path,"NationalPokedex.db");
-
+            
             using (SqliteConnection db = new SqliteConnection($"Filename={dbpath}"))
             {
                 db.Open();
-                SqliteCommand insert = new SqliteCommand("SELECT * from ID", db);
+                SqliteCommand insert = new SqliteCommand("SELECT ID from [pokedex]", db);
                 SqliteDataReader query = insert.ExecuteReader();
                 while(query.Read())
                 {
-                  Dex.Add(new Pokemon() { Id =query.GetInt16(0)});
+                    Dex.Add(new Pokemon() { Id = query.GetInt16(0) });
                 }
              
                 db.Close();
@@ -35,3 +43,18 @@ namespace LetsGoDexTracker.Service
         
     }
 }
+/*
+ string dbpath = Path.Combine(ApplicationData.Current.LocalFolder.Path,"NationalPokedex.db");
+
+            using (SqliteConnection db = new SqliteConnection($"Filename={dbpath}"))
+            {
+                db.Open();
+                SqliteCommand insert = new SqliteCommand("SELECT ID from pokedex", db);
+                var query = insert.ExecuteReader();
+                while(query.Read())
+                {
+                    Dex.Add(new Pokemon() { Id = query.GetInt16(0) });
+                }
+             
+                db.Close();
+            }*/

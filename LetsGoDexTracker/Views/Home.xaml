@@ -64,7 +64,7 @@
         <Button Content="" Height="22" Margin="343,264,0,0" VerticalAlignment="Top" Width="22"  Opacity="0" ToolTipService.ToolTip="Vermillion City"/>
         <Button Content="" Height="72" Margin="348,188,0,0" VerticalAlignment="Top" Width="14"  Opacity="0" ToolTipService.ToolTip="Route 6"/>
         <Button Content="" Height="16" Margin="365,265,0,0" VerticalAlignment="Top" Width="79"  Opacity="0" ToolTipService.ToolTip="Route 11"/>
-        <GridView Margin="691,51,-753,-51" SelectionChanged="GridView_SelectionChanged_1">
+        <GridView Margin="691,51,-753,-51" SelectionChanged="GridView_SelectionChanged_1" x:Name="DataMon">
             <GridView.ItemTemplate>
                 <DataTemplate>
                     <Grid>

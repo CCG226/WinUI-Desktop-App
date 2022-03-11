@@ -13,7 +13,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Microsoft.UI.Xaml.Media.Imaging;
-
+using LetsGoDexTracker.Service;
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
 
@@ -27,12 +27,17 @@ namespace LetsGoDexTracker.Views
         public Home()
         {
             this.InitializeComponent();
+           
         }
         private void TextBlock_SelectionChanged_1(object sender, RoutedEventArgs e) { }
         private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e) { }
         private void GridView_SelectionChanged_1(object sender, SelectionChangedEventArgs e) { }
+       
         
     }
-    
-  
+    public class DataMon
+    {
+
+    }
+   
 }
