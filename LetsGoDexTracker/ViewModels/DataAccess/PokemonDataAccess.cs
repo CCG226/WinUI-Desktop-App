@@ -1,4 +1,4 @@
-﻿/*using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +12,7 @@ using Windows.Storage;
 namespace LetsGoDexTracker.Service
 {
 
-    public class DataAccessService
+    public class PokemonDataAccess
     {
         public async static void IntializeData()
         {
@@ -42,4 +42,4 @@ namespace LetsGoDexTracker.Service
         }
 
     }
-}*/
+}

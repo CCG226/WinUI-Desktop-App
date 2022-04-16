@@ -162,6 +162,7 @@
     <None Remove="Views\About.xaml" />
     <None Remove="Views\Home.xaml" />
     <None Remove="Views\MyDex.xaml" />
+    <None Remove="Views\PokedexEntryWindow\EntryWindow.xaml" />
     <None Remove="Views\Settings.xaml" />
   </ItemGroup>
 
@@ -340,7 +341,7 @@
     <Resource Include="Art\111Rhyhorn.png" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="ViewModels\Service\DataAccessService.cs">
+    <Compile Update="ViewModels\DataAccess\PokemonDataAccess.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
   </ItemGroup>
@@ -361,6 +362,11 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="Views\MyDex.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\PokedexEntryWindow\EntryWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>

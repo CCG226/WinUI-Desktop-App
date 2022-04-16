@@ -27,11 +27,10 @@ namespace LetsGoDexTracker
     ///  Page DexPage = new Page();
     public sealed partial class MainWindow : Window
     {
-        private MainViewModel _mainViewModel;
-
+       
         public MainWindow()
         {
-            _mainViewModel = new MainViewModel();
+            
             this.InitializeComponent();
         }
 

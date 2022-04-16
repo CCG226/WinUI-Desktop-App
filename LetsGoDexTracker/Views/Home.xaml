@@ -5,8 +5,12 @@
     xmlns:local="using:LetsGoDexTracker.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Bvm="using:LetsGoDexTracker.ViewModels"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <Bvm:BaseVM x:Key="Bvm"/>
+    </Page.Resources>
     <Grid>
 
 
