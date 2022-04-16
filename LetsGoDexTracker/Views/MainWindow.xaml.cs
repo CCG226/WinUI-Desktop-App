@@ -29,7 +29,6 @@ namespace LetsGoDexTracker
     {
         private MainViewModel _mainViewModel;
 
-        public Base Switch => _mainViewModel.pageChange;
         public MainWindow()
         {
             _mainViewModel = new MainViewModel();

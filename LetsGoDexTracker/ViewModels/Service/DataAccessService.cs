@@ -1,4 +1,4 @@
-﻿using System;
+﻿/*using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,40 +21,25 @@ namespace LetsGoDexTracker.Service
         }
         public static List<Pokemon> DataAccess()
         {
-         
+
             List<Pokemon> Dex = new List<Pokemon>();
-            
-            string dbpath = Path.Combine(ApplicationData.Current.LocalFolder.Path,"NationalPokedex.db");
-            
+
+            string dbpath = Path.Combine(ApplicationData.Current.LocalFolder.Path, "NationalPokedex.db");
+
             using (SqliteConnection db = new SqliteConnection($"Filename={dbpath}"))
             {
                 db.Open();
                 SqliteCommand insert = new SqliteCommand("SELECT ID from [pokedex]", db);
                 SqliteDataReader query = insert.ExecuteReader();
-                while(query.Read())
+                while (query.Read())
                 {
                     Dex.Add(new Pokemon() { Id = query.GetInt16(0) });
                 }
-             
+
                 db.Close();
             }
             return Dex;
         }
-        
-    }
-}
-/*
- string dbpath = Path.Combine(ApplicationData.Current.LocalFolder.Path,"NationalPokedex.db");
 
-            using (SqliteConnection db = new SqliteConnection($"Filename={dbpath}"))
-            {
-                db.Open();
-                SqliteCommand insert = new SqliteCommand("SELECT ID from pokedex", db);
-                var query = insert.ExecuteReader();
-                while(query.Read())
-                {
-                    Dex.Add(new Pokemon() { Id = query.GetInt16(0) });
-                }
-             
-                db.Close();
-            }*/
+    }
+}*/

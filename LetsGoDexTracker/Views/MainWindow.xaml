@@ -17,11 +17,8 @@
                          BackRequested="NavigationView_BackRequested"
                         PaneDisplayMode="Top">
 
-
-
             <muxc:NavigationView.AutoSuggestBox>
-                <!-- See AutoSuggestBox documentation for
-                 more info about how to implement search. -->
+              
                 <AutoSuggestBox x:Name="NavViewSearchBox" QueryIcon="Find"/>
             </muxc:NavigationView.AutoSuggestBox>
 

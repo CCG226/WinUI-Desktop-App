@@ -320,11 +320,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Data.Sqlite" Version="6.0.2" />
-    <PackageReference Include="Microsoft.Data.Sqlite.Core" Version="6.0.2" />
-    <PackageReference Include="Microsoft.NETCore.Platforms" Version="6.0.1" />
-    <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.0.0" />
-    <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.22000.194" />
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="6.0.3" />
+    <PackageReference Include="Microsoft.Data.Sqlite.Core" Version="6.0.3" />
+    <PackageReference Include="Microsoft.NETCore.Platforms" Version="6.0.2" />
+    <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.0.1" />
+    <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.22000.197" />
+    <PackageReference Include="SQLitePCLRaw.bundle_winsqlite3" Version="2.0.7" />
     <Manifest Include="$(ApplicationManifest)" />
   </ItemGroup>
 
@@ -337,6 +338,11 @@
   <ItemGroup>
     <Resource Include="Art\096Drowzee.png" />
     <Resource Include="Art\111Rhyhorn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="ViewModels\Service\DataAccessService.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Views\About.xaml">
