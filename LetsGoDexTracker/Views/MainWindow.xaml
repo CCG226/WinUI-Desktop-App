@@ -18,7 +18,7 @@
                         PaneDisplayMode="Top">
 
             <muxc:NavigationView.AutoSuggestBox>
-              
+
                 <AutoSuggestBox x:Name="NavViewSearchBox" QueryIcon="Find"/>
             </muxc:NavigationView.AutoSuggestBox>
 
@@ -42,6 +42,4 @@
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
     </Grid>
-
-
 </Window>

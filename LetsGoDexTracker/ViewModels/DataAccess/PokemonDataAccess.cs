@@ -8,6 +8,7 @@ using Microsoft.Data.Sqlite;
 using LetsGoDexTracker.PokemonModel;
 using System.IO;
 using Windows.Storage;
+using System.Collections.ObjectModel;
 
 namespace LetsGoDexTracker.Service
 {
@@ -19,12 +20,13 @@ namespace LetsGoDexTracker.Service
             await ApplicationData.Current.LocalFolder.CreateFileAsync("NationalPokedex.db", CreationCollisionOption.OpenIfExists);
 
         }
-        public static List<Pokemon> DataAccess()
+        public static ObservableCollection<Pokemon> DataAccess()
         {
 
-            List<Pokemon> Dex = new List<Pokemon>();
+            ObservableCollection<Pokemon> Dex = new ObservableCollection<Pokemon>();
 
-            string dbpath = Path.Combine(ApplicationData.Current.LocalFolder.Path, "NationalPokedex.db");
+            
+            string dbpath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Databases\NationalPokedex.db");
 
             using (SqliteConnection db = new SqliteConnection($"Filename={dbpath}"))
             {

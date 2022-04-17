@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using LetsGoDexTracker.ViewModels.Commands;
 using LetsGoDexTracker.PokemonModel;
 using System.Collections.ObjectModel;
-
+using LetsGoDexTracker.Service;
 namespace LetsGoDexTracker.ViewModels
 {
     public class BaseVM : INotifyPropertyChanged
@@ -38,7 +38,10 @@ namespace LetsGoDexTracker.ViewModels
 
         public BaseVM()
         {
-            Pokedex = new ObservableCollection<Pokemon>();
+
+            PokemonDataAccess.IntializeData();
+
+            Pokedex = PokemonDataAccess.DataAccess();
         }
 
         public void UpdateGird(object Area)//whenever a region on the map is selected, update vm 
@@ -46,7 +49,7 @@ namespace LetsGoDexTracker.ViewModels
            
         }
 
-        public void OpenSelectedPokemonPokedexEntry(Pokemon pokemon)//whenver pokemon is selected on grid 
+        public void OpenSelectedPokemonPokedexEntry(Pokemon pokemon)//whenever pokemon is selected on grid 
         {
 
         }
