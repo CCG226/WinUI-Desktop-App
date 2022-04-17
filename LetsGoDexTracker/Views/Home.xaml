@@ -11,7 +11,7 @@
     <Page.Resources>
         <Bvm:BaseVM x:Key="Bvm"/>
     </Page.Resources>
-    <Grid>
+    <Grid DataContext="{StaticResource Bvm}">
 
 
         <Grid.ColumnDefinitions>
@@ -69,21 +69,21 @@
         <Button  Height="72" Margin="348,188,0,0" VerticalAlignment="Top" Width="14"  Opacity="0" ToolTipService.ToolTip="Route 6"/>
         <Button Height="16" Margin="365,265,0,0" VerticalAlignment="Top" Width="79"  Opacity="0" ToolTipService.ToolTip="Route 11"/>
 
-        <GridView Margin="691,51,-753,-51" >
+        <GridView Margin="691,51,-753,-51" ItemsSource="{Binding AvailablePokemon}">
             <GridView.ItemTemplate>
                 <DataTemplate>
                     <Grid>
-                        <Border BorderThickness="2" BorderBrush="LightGray" Margin="0,0,0,-1"/>
+                        <Border BorderThickness="2" Background="Snow" BorderBrush="Black" Margin="0,0,0,-1"/>
 
                         <StackPanel Margin="20,20,20,34" Width="162">
 
-                            <TextBlock Text="000" FontWeight="Thin" 
+                            <TextBlock Text="{Binding Id}" FontWeight="Thin" 
                                    Style="{StaticResource BaseTextBlockStyle}"/>
-                            <Image Source="/Assets/kanto.png" Height="67" Width="82"/>
+                            <Image Source="{Binding Image}" Height="67" Width="82"/>
                             <TextBlock Text="" FontWeight="Bold" HorizontalAlignment="Center" 
                                    Style="{StaticResource BaseTextBlockStyle}"/>
 
-                            <TextBlock Text="Name" FontWeight="Bold" HorizontalAlignment="Center" 
+                            <TextBlock Text="{Binding Name}" FontWeight="Bold" HorizontalAlignment="Center" 
                                    Style="{StaticResource BaseTextBlockStyle}"/>
 
                         </StackPanel>
@@ -91,9 +91,7 @@
                 </DataTemplate>
             </GridView.ItemTemplate>
             <GridView.Items>
-                <x:String>1</x:String>
-                <x:String>2</x:String>
-                <x:String>3</x:String>
+
 
             </GridView.Items>
         </GridView>

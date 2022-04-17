@@ -62,6 +62,7 @@ namespace LetsGoDexTracker.Service
                         Special_Defense = Convert.ToInt32(query[20]),
                         Speed = Convert.ToInt32(query[21]),
                         Base_Stats = Convert.ToInt32(query[22])
+
                     
                     });
                 }

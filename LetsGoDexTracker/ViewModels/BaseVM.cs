@@ -36,12 +36,17 @@ namespace LetsGoDexTracker.ViewModels
          
         public ObservableCollection<Pokemon> Pokedex { get; set; }
 
+        public ObservableCollection<Pokemon> AvailablePokemon { get; set; }
+
         public BaseVM()
         {
 
             PokemonDataAccess.IntializeData();
 
             Pokedex = PokemonDataAccess.DataAccess();
+
+            AvailablePokemon = Pokedex;
+            
         }
 
         public void UpdateGird(object Area)//whenever a region on the map is selected, update vm 
