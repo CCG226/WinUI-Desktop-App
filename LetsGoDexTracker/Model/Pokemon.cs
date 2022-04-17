@@ -22,19 +22,21 @@ namespace LetsGoDexTracker.PokemonModel
         
         public string DexEntry { get; set; }
         
-        public string Loacation { get; set; }
+        public string Location { get; set; }
         
         public string Evolve { get; set; }
         
         public string Height { get; set; }
         
-        public string Weight { get; set; }
+        public decimal Weight { get; set; }
 
         public string Abilities1 { get; set; }
         
         public string Abilities2 { get; set; }
 
         public string Hidden { get; set; }
+
+        public string Category { get; set; }
 
         public int Exclusivity { get; set; }
 
