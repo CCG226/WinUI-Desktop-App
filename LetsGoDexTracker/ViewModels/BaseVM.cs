@@ -18,6 +18,17 @@ namespace LetsGoDexTracker.ViewModels
 
         public event PropertyChangedEventHandler PropertyChanged;//event type to handle property changed
 
+        private string selectedArea;
+        public string SelectedArea
+        {
+            get { return selectedArea; }
+            set
+            {
+                selectedArea = value;
+                OnPropertyChanged("SelectedArea");
+            }
+        }
+
         private Pokemon selectedPokemon;
         public Pokemon SelectedPokemon
         {
@@ -34,18 +45,13 @@ namespace LetsGoDexTracker.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));//make sure event exists and invoke a event if property changes in view or model
         }
          
-        public ObservableCollection<Pokemon> Pokedex { get; set; }
-
         public ObservableCollection<Pokemon> AvailablePokemon { get; set; }
 
         public BaseVM()
         {
+            SelectedArea = "Available Pokemon in Kanto:";
+            AvailablePokemon = PokemonDataAccess.DataAccess();
 
-            PokemonDataAccess.IntializeData();
-
-            Pokedex = PokemonDataAccess.DataAccess();
-
-            AvailablePokemon = Pokedex;
             
         }
 

@@ -17,18 +17,14 @@ namespace LetsGoDexTracker.Service
     {
         public static string SELECTALL = "SELECT ID, DexID, Name, Image, PrimaryType, SecondaryType, Entry, location, LevelUp, Height, Weight, Abilities1, Abilities2, 'Hidden Ability', Category, Availability, HP, Attack, Defense, SpA, SpD, Speed, Total  from [pokedex]";
       
-        public async static void IntializeData()
-        {
-            await ApplicationData.Current.LocalFolder.CreateFileAsync("NationalPokedex.db", CreationCollisionOption.OpenIfExists);
-
-        }
+        
         public static ObservableCollection<Pokemon> DataAccess()
         {
 
             ObservableCollection<Pokemon> Dex = new ObservableCollection<Pokemon>();
 
             
-            string dbpath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Databases\NationalPokedex.db");
+            string dbpath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Database\KantoPokedex.db");
 
             using (SqliteConnection db = new SqliteConnection($"Filename={dbpath}"))
             {
