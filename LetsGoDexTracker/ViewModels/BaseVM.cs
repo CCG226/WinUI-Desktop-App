@@ -60,7 +60,24 @@ namespace LetsGoDexTracker.ViewModels
 
         public void UpdateGird(object Area)//whenever a region on the map is selected, update vm 
         {
-           
+            string newArea = Area.ToString();
+            if(newArea.Contains("Kanto"))
+            {
+                var all = AvailablePokemon.Where(pokemon => !pokemon.Name.Equals(null));
+                AvailablePokemon = new ObservableCollection<Pokemon>(all);
+                SelectedArea = "Available Pokemon in Kanto:";
+            }
+            else if (newArea.Contains("Route"))
+            {
+                SelectedArea = "Available Pokemon on " + newArea + ":";
+            }
+            else
+            {
+                SelectedArea = "Available Pokemon in " + newArea + ":";
+            }
+            var Pokemonfilter = AvailablePokemon.Where(pokemon => pokemon.Location.Contains(newArea));
+            AvailablePokemon = new ObservableCollection<Pokemon>(Pokemonfilter);
+
         }
 
         public void OpenSelectedPokemonPokedexEntry(Pokemon pokemon)//whenever pokemon is selected on grid 

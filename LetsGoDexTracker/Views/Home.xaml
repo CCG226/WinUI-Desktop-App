@@ -95,5 +95,6 @@
 
             </GridView.Items>
         </GridView>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Kanto" Content="Select All" Background="CadetBlue" Foreground="Snow" Height="33" Margin="88,449,0,0" VerticalAlignment="Top" Width="78"/>
     </Grid>
 </Page>
