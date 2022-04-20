@@ -50,7 +50,10 @@ namespace LetsGoDexTracker.ViewModels
         public BaseVM()
         {
             SelectedArea = "Available Pokemon in Kanto:";
+            
             AvailablePokemon = PokemonDataAccess.DataAccess();
+           
+            RoutingCommand = new RoutingCommand(this);
 
             
         }

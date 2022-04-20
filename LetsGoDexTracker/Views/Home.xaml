@@ -22,52 +22,52 @@
         <Image Source="/Assets/kanto.png" MinHeight="100" MinWidth="100" MaxHeight="425" MaxWidth="425" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,51,0,0"/>
         <TextBlock HorizontalAlignment="Left" Height="36" Margin="100,10,0,0" TextWrapping="Wrap" Text="Interactive Map Of Kanto:" VerticalAlignment="Top" Width="245"/>
         <TextBlock Height="29" Margin="691,10,-356,0" TextWrapping="Wrap" Text="{Binding SelectedArea}" VerticalAlignment="Top" RenderTransformOrigin="0.497,0.457"/>
-        <Button  Height="25" Margin="100,90,0,0" VerticalAlignment="Top" Width="23" Opacity="0" ToolTipService.ToolTip="Indigo Plateau"/>
-        <Button  Height="48" Margin="103,115,0,0" VerticalAlignment="Top" Width="20"  Opacity="0" ToolTipService.ToolTip="Victory Road"/>
-        <Button  Height="79" Margin="103,163,0,0" VerticalAlignment="Top" Width="20"  Opacity="0" ToolTipService.ToolTip="Route 23"/>
-        <Button  Height="16" Margin="103,242,0,0" VerticalAlignment="Top" Width="44"  Opacity="0" ToolTipService.ToolTip="Route 22"/>
-        <Button  Height="19" Margin="0,241,430,0" VerticalAlignment="Top" Width="18" RenderTransformOrigin="0.56,0.437" HorizontalAlignment="Right"  Opacity="0" ToolTipService.ToolTip="Virdian City"/>
-        <Button  Height="23" Margin="152,117,0,0" VerticalAlignment="Top" Width="23"  Opacity="0" ToolTipService.ToolTip="Pewter City"/>
-        <Button  Height="23" Margin="177,142,0,0" VerticalAlignment="Top" Width="21"  Opacity="0" ToolTipService.ToolTip="Diglett's Cave"/>
-        <Button  Height="26" Margin="152,142,0,0" VerticalAlignment="Top" Width="15"  Opacity="0" ToolTipService.ToolTip="Route 2"/>
-        <Button  Height="18" Margin="152,169,0,0" VerticalAlignment="Top" Width="19"  Opacity="0" ToolTipService.ToolTip="Virdian Forest"/>
-        <Button  Height="48" Margin="156,188,0,0" VerticalAlignment="Top" Width="11"  Opacity="0" ToolTipService.ToolTip="Route 2"/>
-        <Button  Height="53" Margin="155,260,0,0" VerticalAlignment="Top" Width="16"  Opacity="0" ToolTipService.ToolTip="Route 1"/>
-        <Button  Height="22" Margin="152,313,0,0" VerticalAlignment="Top" Width="21"  Opacity="0" ToolTipService.ToolTip="Pallet Town"/>
-        <Button  Height="22" Margin="149,411,0,0" VerticalAlignment="Top" Width="21"  Opacity="0" ToolTipService.ToolTip="Route 21"/>
-        <Button  Height="71" Margin="155,335,0,0" VerticalAlignment="Top" Width="14"  Opacity="0" ToolTipService.ToolTip="Cinnabar Island"/>
-        <Button  Height="16" Margin="174,411,0,0" VerticalAlignment="Top" Width="44"  Opacity="0" ToolTipService.ToolTip="Route 20"/>
-        <Button  Height="17" Margin="226,410,0,0" VerticalAlignment="Top" Width="20" Opacity="0" ToolTipService.ToolTip="Seafoam Islands"/>
-        <Button  Height="20" Margin="246,407,0,0" VerticalAlignment="Top" Width="68" Opacity="0" ToolTipService.ToolTip="Route 20"/>
-        <Button  Height="39" Margin="300,383,0,0" VerticalAlignment="Top" Width="15"  Opacity="0" ToolTipService.ToolTip="Route 19"/>
-        <Button  Height="19" Margin="297,359,0,0" VerticalAlignment="Top" Width="21"  Opacity="0" ToolTipService.ToolTip="Fuchsia City"/>
-        <Button  Height="19" Margin="204,361,0,0" VerticalAlignment="Top" Width="93"  Opacity="0" ToolTipService.ToolTip="Route 18"/>
-        <Button  Height="177" Margin="204,184,0,0" VerticalAlignment="Top" Width="15"  Opacity="0" ToolTipService.ToolTip="Route 17"/>
-        <Button  Height="15" Margin="204,169,0,0" VerticalAlignment="Top" Width="65"  Opacity="0" ToolTipService.ToolTip="Route 16"/>
-        <Button  Height="28" Margin="273,162,0,0" VerticalAlignment="Top" Width="21"  Opacity="0" ToolTipService.ToolTip="Celadon City"/>
-        <Button  Height="15" Margin="294,169,0,0" VerticalAlignment="Top" Width="47"  Opacity="0" ToolTipService.ToolTip="Route 7"/>
-        <Button  Height="15" Margin="175,122,0,0" VerticalAlignment="Top" Width="64"  Opacity="0" ToolTipService.ToolTip="Route 3"/>
-        <Button  Height="27" Margin="228,96,0,0" VerticalAlignment="Top" Width="22"  Opacity="0" ToolTipService.ToolTip="Route 3"/>
-        <Button  Height="22" Margin="250,91,0,0" VerticalAlignment="Top" Width="19"  Opacity="0" ToolTipService.ToolTip="Mt. Moon"/>
-        <Button  Height="24" Margin="346,165,0,0" VerticalAlignment="Top" Width="21"  Opacity="0" ToolTipService.ToolTip="Saffron City"/>
-        <Button  Height="56" Margin="346,115,0,0" VerticalAlignment="Top" Width="16"  Opacity="0" ToolTipService.ToolTip="Route 5"/>
-        <Button  Height="18" Margin="269,96,0,0" VerticalAlignment="Top" Width="72"  Opacity="0" ToolTipService.ToolTip="Route 4"/>
-        <Button  Height="24" Margin="346,93,0,0" VerticalAlignment="Top" Width="21"  Opacity="0" ToolTipService.ToolTip="Cerulean City"/>
-        <Button  Height="28" Margin="348,65,0,0" VerticalAlignment="Top" Width="14"  Opacity="0" ToolTipService.ToolTip="Route 24"/>
-        <Button  Height="14" Margin="346,51,0,0" VerticalAlignment="Top" Width="60"  Opacity="0" ToolTipService.ToolTip="Route 25"/>
-        <Button  Height="21" Margin="367,96,0,0" VerticalAlignment="Top" Width="93"  Opacity="0" ToolTipService.ToolTip="Route 9"/>
-        <Button  Height="20" Margin="439,118,0,0" VerticalAlignment="Top" Width="21"  Opacity="0" ToolTipService.ToolTip="Rock Tunnel"/>
-        <Button  Height="22" Margin="439,166,0,0" VerticalAlignment="Top" Width="25"  Opacity="0" ToolTipService.ToolTip="Lavender Town"/>
-        <Button  Height="27" Margin="444,138,0,0" VerticalAlignment="Top" Width="16"  Opacity="0" ToolTipService.ToolTip="Route 10"/>
-        <Button  Height="22" Margin="465,142,0,0" VerticalAlignment="Top" Width="21"  Opacity="0" ToolTipService.ToolTip="Power Plant"/>
-        <Button  Height="125" Margin="444,188,0,0" VerticalAlignment="Top" Width="16"  Opacity="0" ToolTipService.ToolTip="Route 12"/>
-        <Button  Height="16" Margin="367,168,0,0" VerticalAlignment="Top" Width="72"  Opacity="0" ToolTipService.ToolTip="Route 8"/>
-        <Button  Height="19" Margin="318,361,0,0" VerticalAlignment="Top" Width="54"  Opacity="0" ToolTipService.ToolTip="Route 15"/>
-        <Button  Height="65" Margin="372,313,0,0" VerticalAlignment="Top" Width="17"  Opacity="0" ToolTipService.ToolTip="Route 14"/>
-        <Button  Height="15" Margin="389,313,0,0" VerticalAlignment="Top" Width="69"  Opacity="0" ToolTipService.ToolTip="Route 13"/>
-        <Button  Height="22" Margin="343,264,0,0" VerticalAlignment="Top" Width="22"  Opacity="0" ToolTipService.ToolTip="Vermillion City"/>
-        <Button  Height="72" Margin="348,188,0,0" VerticalAlignment="Top" Width="14"  Opacity="0" ToolTipService.ToolTip="Route 6"/>
-        <Button Height="16" Margin="365,265,0,0" VerticalAlignment="Top" Width="79"  Opacity="0" ToolTipService.ToolTip="Route 11"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Indigo Plateau" Height="25" Margin="100,90,0,0" VerticalAlignment="Top" Width="23" Opacity="0" ToolTipService.ToolTip="Indigo Plateau"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Victory Road" Height="48" Margin="103,115,0,0" VerticalAlignment="Top" Width="20"  Opacity="0" ToolTipService.ToolTip="Victory Road"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Route 23" Height="79" Margin="103,163,0,0" VerticalAlignment="Top" Width="20"  Opacity="0" ToolTipService.ToolTip="Route 23"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Rpute 22"  Height="16" Margin="103,242,0,0" VerticalAlignment="Top" Width="44"  Opacity="0" ToolTipService.ToolTip="Route 22"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Virdian City"  Height="19" Margin="0,241,430,0" VerticalAlignment="Top" Width="18" RenderTransformOrigin="0.56,0.437" HorizontalAlignment="Right"  Opacity="0" ToolTipService.ToolTip="Virdian City"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Pewter City"  Height="23" Margin="152,117,0,0" VerticalAlignment="Top" Width="23"  Opacity="0" ToolTipService.ToolTip="Pewter City"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Diglett's Cave"  Height="23" Margin="177,142,0,0" VerticalAlignment="Top" Width="21"  Opacity="0" ToolTipService.ToolTip="Diglett's Cave"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Route 2"  Height="26" Margin="152,142,0,0" VerticalAlignment="Top" Width="15"  Opacity="0" ToolTipService.ToolTip="Route 2"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Virdian Forest"  Height="18" Margin="152,169,0,0" VerticalAlignment="Top" Width="19"  Opacity="0" ToolTipService.ToolTip="Virdian Forest"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Route 2"  Height="48" Margin="156,188,0,0" VerticalAlignment="Top" Width="11"  Opacity="0" ToolTipService.ToolTip="Route 2"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Route 1"  Height="53" Margin="155,260,0,0" VerticalAlignment="Top" Width="16"  Opacity="0" ToolTipService.ToolTip="Route 1"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Pallet Town"  Height="22" Margin="152,313,0,0" VerticalAlignment="Top" Width="21"  Opacity="0" ToolTipService.ToolTip="Pallet Town"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Route 21"  Height="22" Margin="149,411,0,0" VerticalAlignment="Top" Width="21"  Opacity="0" ToolTipService.ToolTip="Route 21"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Cinnabar Island"  Height="71" Margin="155,335,0,0" VerticalAlignment="Top" Width="14"  Opacity="0" ToolTipService.ToolTip="Cinnabar Island"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Route 20"  Height="16" Margin="174,411,0,0" VerticalAlignment="Top" Width="44"  Opacity="0" ToolTipService.ToolTip="Route 20"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Seafoam Islands"  Height="17" Margin="226,410,0,0" VerticalAlignment="Top" Width="20" Opacity="0" ToolTipService.ToolTip="Seafoam Islands"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Route 20"  Height="20" Margin="246,407,0,0" VerticalAlignment="Top" Width="68" Opacity="0" ToolTipService.ToolTip="Route 20"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Route 19"  Height="39" Margin="300,383,0,0" VerticalAlignment="Top" Width="15"  Opacity="0" ToolTipService.ToolTip="Route 19"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Fuchsia City"  Height="19" Margin="297,359,0,0" VerticalAlignment="Top" Width="21"  Opacity="0" ToolTipService.ToolTip="Fuchsia City"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Route 18"  Height="19" Margin="204,361,0,0" VerticalAlignment="Top" Width="93"  Opacity="0" ToolTipService.ToolTip="Route 18"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Route 17"  Height="177" Margin="204,184,0,0" VerticalAlignment="Top" Width="15"  Opacity="0" ToolTipService.ToolTip="Route 17"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Route 16"  Height="15" Margin="204,169,0,0" VerticalAlignment="Top" Width="65"  Opacity="0" ToolTipService.ToolTip="Route 16"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Celadon City"  Height="28" Margin="273,162,0,0" VerticalAlignment="Top" Width="21"  Opacity="0" ToolTipService.ToolTip="Celadon City"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Route 7"  Height="15" Margin="294,169,0,0" VerticalAlignment="Top" Width="47"  Opacity="0" ToolTipService.ToolTip="Route 7"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Route 3"  Height="15" Margin="175,122,0,0" VerticalAlignment="Top" Width="64"  Opacity="0" ToolTipService.ToolTip="Route 3"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Route 3"  Height="27" Margin="228,96,0,0" VerticalAlignment="Top" Width="22"  Opacity="0" ToolTipService.ToolTip="Route 3"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Mt. Moon"  Height="22" Margin="250,91,0,0" VerticalAlignment="Top" Width="19"  Opacity="0" ToolTipService.ToolTip="Mt. Moon"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Saffron City"  Height="24" Margin="346,165,0,0" VerticalAlignment="Top" Width="21"  Opacity="0" ToolTipService.ToolTip="Saffron City"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Route 5"  Height="56" Margin="346,115,0,0" VerticalAlignment="Top" Width="16"  Opacity="0" ToolTipService.ToolTip="Route 5"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Route 4"  Height="18" Margin="269,96,0,0" VerticalAlignment="Top" Width="72"  Opacity="0" ToolTipService.ToolTip="Route 4"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Cerulean City"  Height="24" Margin="346,93,0,0" VerticalAlignment="Top" Width="21"  Opacity="0" ToolTipService.ToolTip="Cerulean City"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Route 24"  Height="28" Margin="348,65,0,0" VerticalAlignment="Top" Width="14"  Opacity="0" ToolTipService.ToolTip="Route 24"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Route 25"  Height="14" Margin="346,51,0,0" VerticalAlignment="Top" Width="60"  Opacity="0" ToolTipService.ToolTip="Route 25"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Route 9"  Height="21" Margin="367,96,0,0" VerticalAlignment="Top" Width="93"  Opacity="0" ToolTipService.ToolTip="Route 9"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Rock Tunnel"  Height="20" Margin="439,118,0,0" VerticalAlignment="Top" Width="21"  Opacity="0" ToolTipService.ToolTip="Rock Tunnel"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Lavender Town"  Height="22" Margin="439,166,0,0" VerticalAlignment="Top" Width="25"  Opacity="0" ToolTipService.ToolTip="Lavender Town"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Route 10"  Height="27" Margin="444,138,0,0" VerticalAlignment="Top" Width="16"  Opacity="0" ToolTipService.ToolTip="Route 10"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Power Plant"  Height="22" Margin="465,142,0,0" VerticalAlignment="Top" Width="21"  Opacity="0" ToolTipService.ToolTip="Power Plant"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Route 12"  Height="125" Margin="444,188,0,0" VerticalAlignment="Top" Width="16"  Opacity="0" ToolTipService.ToolTip="Route 12"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Route 8"  Height="16" Margin="367,168,0,0" VerticalAlignment="Top" Width="72"  Opacity="0" ToolTipService.ToolTip="Route 8"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Route 15"  Height="19" Margin="318,361,0,0" VerticalAlignment="Top" Width="54"  Opacity="0" ToolTipService.ToolTip="Route 15"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Route 14"  Height="65" Margin="372,313,0,0" VerticalAlignment="Top" Width="17"  Opacity="0" ToolTipService.ToolTip="Route 14"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Route 13"  Height="15" Margin="389,313,0,0" VerticalAlignment="Top" Width="69"  Opacity="0" ToolTipService.ToolTip="Route 13"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Vermillion City"  Height="22" Margin="343,264,0,0" VerticalAlignment="Top" Width="22"  Opacity="0" ToolTipService.ToolTip="Vermillion City"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Route 6"  Height="72" Margin="348,188,0,0" VerticalAlignment="Top" Width="14"  Opacity="0" ToolTipService.ToolTip="Route 6"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Route 11"  Height="16" Margin="365,265,0,0" VerticalAlignment="Top" Width="79"  Opacity="0" ToolTipService.ToolTip="Route 11"/>
 
         <GridView Margin="691,51,-753,-51" ItemsSource="{Binding AvailablePokemon}">
             <GridView.ItemTemplate>
