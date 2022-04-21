@@ -17,6 +17,22 @@ namespace LetsGoDexTracker.ViewModels
         public RoutingCommand RoutingCommand { get; set; }//if button pressed on View model
 
         public event PropertyChangedEventHandler PropertyChanged;//event type to handle property changed
+        private void OnPropertyChanged(string propertyName)//fires event
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));//make sure event exists and invoke a event if property changes in view or model
+        }
+
+
+        private ObservableCollection<Pokemon> availablePokemon;
+        public ObservableCollection<Pokemon> AvailablePokemon
+        {
+            get { return availablePokemon; }
+            set 
+            { 
+              availablePokemon = value; 
+              OnPropertyChanged("AvailablePokemon"); 
+            }
+        }
 
         private string selectedArea;
         public string SelectedArea
@@ -40,18 +56,15 @@ namespace LetsGoDexTracker.ViewModels
             }
         }
 
-        private void OnPropertyChanged(string propertyName)//fires event
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));//make sure event exists and invoke a event if property changes in view or model
-        }
-         
-        public ObservableCollection<Pokemon> AvailablePokemon { get; set; }
+      
+        public ObservableCollection<Pokemon> NationalPokedex { get; set; }
 
         public BaseVM()
         {
             SelectedArea = "Available Pokemon in Kanto:";
             
-            AvailablePokemon = PokemonDataAccess.DataAccess();
+            NationalPokedex = PokemonDataAccess.DataAccess();
+            AvailablePokemon = NationalPokedex;
            
             RoutingCommand = new RoutingCommand(this);
 
@@ -63,9 +76,9 @@ namespace LetsGoDexTracker.ViewModels
             string newArea = Area.ToString();
             if(newArea.Contains("Kanto"))
             {
-                var all = AvailablePokemon.Where(pokemon => !pokemon.Name.Equals(null));
-                AvailablePokemon = new ObservableCollection<Pokemon>(all);
+                AvailablePokemon = NationalPokedex;
                 SelectedArea = "Available Pokemon in Kanto:";
+                return;
             }
             else if (newArea.Contains("Route"))
             {
@@ -75,8 +88,8 @@ namespace LetsGoDexTracker.ViewModels
             {
                 SelectedArea = "Available Pokemon in " + newArea + ":";
             }
-            var Pokemonfilter = AvailablePokemon.Where(pokemon => pokemon.Location.Contains(newArea));
-            AvailablePokemon = new ObservableCollection<Pokemon>(Pokemonfilter);
+            var Pokemonfilter = NationalPokedex.Where(pokemon => pokemon.Location.Contains(newArea));
+            AvailablePokemon =  new ObservableCollection<Pokemon>(Pokemonfilter);
 
         }
 

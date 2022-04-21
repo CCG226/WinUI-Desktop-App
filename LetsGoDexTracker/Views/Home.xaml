@@ -26,14 +26,14 @@
         <Button Command="{Binding RoutingCommand}" CommandParameter="Victory Road" Height="48" Margin="103,115,0,0" VerticalAlignment="Top" Width="20"  Opacity="0" ToolTipService.ToolTip="Victory Road"/>
         <Button Command="{Binding RoutingCommand}" CommandParameter="Route 23" Height="79" Margin="103,163,0,0" VerticalAlignment="Top" Width="20"  Opacity="0" ToolTipService.ToolTip="Route 23"/>
         <Button Command="{Binding RoutingCommand}" CommandParameter="Rpute 22"  Height="16" Margin="103,242,0,0" VerticalAlignment="Top" Width="44"  Opacity="0" ToolTipService.ToolTip="Route 22"/>
-        <Button Command="{Binding RoutingCommand}" CommandParameter="Virdian City"  Height="19" Margin="0,241,430,0" VerticalAlignment="Top" Width="18" RenderTransformOrigin="0.56,0.437" HorizontalAlignment="Right"  Opacity="0" ToolTipService.ToolTip="Virdian City"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Viridian City"  Height="19" Margin="0,241,430,0" VerticalAlignment="Top" Width="18" RenderTransformOrigin="0.56,0.437" HorizontalAlignment="Right"  Opacity="0" ToolTipService.ToolTip="Viridian City"/>
         <Button Command="{Binding RoutingCommand}" CommandParameter="Pewter City"  Height="23" Margin="152,117,0,0" VerticalAlignment="Top" Width="23"  Opacity="0" ToolTipService.ToolTip="Pewter City"/>
         <Button Command="{Binding RoutingCommand}" CommandParameter="Diglett's Cave"  Height="23" Margin="177,142,0,0" VerticalAlignment="Top" Width="21"  Opacity="0" ToolTipService.ToolTip="Diglett's Cave"/>
         <Button Command="{Binding RoutingCommand}" CommandParameter="Route 2"  Height="26" Margin="152,142,0,0" VerticalAlignment="Top" Width="15"  Opacity="0" ToolTipService.ToolTip="Route 2"/>
-        <Button Command="{Binding RoutingCommand}" CommandParameter="Virdian Forest"  Height="18" Margin="152,169,0,0" VerticalAlignment="Top" Width="19"  Opacity="0" ToolTipService.ToolTip="Virdian Forest"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Viridian Forest"  Height="18" Margin="152,169,0,0" VerticalAlignment="Top" Width="19"  Opacity="0" ToolTipService.ToolTip="Viridian Forest"/>
         <Button Command="{Binding RoutingCommand}" CommandParameter="Route 2"  Height="48" Margin="156,188,0,0" VerticalAlignment="Top" Width="11"  Opacity="0" ToolTipService.ToolTip="Route 2"/>
         <Button Command="{Binding RoutingCommand}" CommandParameter="Route 1"  Height="53" Margin="155,260,0,0" VerticalAlignment="Top" Width="16"  Opacity="0" ToolTipService.ToolTip="Route 1"/>
-        <Button Command="{Binding RoutingCommand}" CommandParameter="Pallet Town"  Height="22" Margin="152,313,0,0" VerticalAlignment="Top" Width="21"  Opacity="0" ToolTipService.ToolTip="Pallet Town"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Starter"  Height="22" Margin="152,313,0,0" VerticalAlignment="Top" Width="21"  Opacity="0" ToolTipService.ToolTip="Pallet Town"/>
         <Button Command="{Binding RoutingCommand}" CommandParameter="Route 21"  Height="22" Margin="149,411,0,0" VerticalAlignment="Top" Width="21"  Opacity="0" ToolTipService.ToolTip="Route 21"/>
         <Button Command="{Binding RoutingCommand}" CommandParameter="Cinnabar Island"  Height="71" Margin="155,335,0,0" VerticalAlignment="Top" Width="14"  Opacity="0" ToolTipService.ToolTip="Cinnabar Island"/>
         <Button Command="{Binding RoutingCommand}" CommandParameter="Route 20"  Height="16" Margin="174,411,0,0" VerticalAlignment="Top" Width="44"  Opacity="0" ToolTipService.ToolTip="Route 20"/>
@@ -95,6 +95,6 @@
 
             </GridView.Items>
         </GridView>
-        <Button Command="{Binding RoutingCommand}" CommandParameter="Kanto" Content="Select All" Background="CadetBlue" Foreground="Snow" Height="33" Margin="88,449,0,0" VerticalAlignment="Top" Width="78"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Kanto" Content="All" Background="CadetBlue" Foreground="Snow" Height="33" Margin="88,449,0,0" VerticalAlignment="Top" Width="78"/>
     </Grid>
 </Page>
