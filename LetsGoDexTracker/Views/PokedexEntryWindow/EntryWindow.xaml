@@ -16,13 +16,12 @@
         <Image Source="/Assets/kanto.png"  Margin="54,73,741,542"/>
         <TextBlock HorizontalAlignment="Left" FontWeight="Bold" FontSize="18" FontFamily="Trebuchet MS" Margin="186,42,0,0" TextWrapping="Wrap" Text="GengarGengarGen" VerticalAlignment="Top" Height="23" Width="171" RenderTransformOrigin="0.467,0.578"/>
         <TextBlock HorizontalAlignment="Left" FontWeight="SemiBold" FontFamily="Trebuchet MS" Height="23" Margin="55,44,0,0" TextWrapping="Wrap" Text="Pokedex ID: 000" VerticalAlignment="Top" Width="121"/>
-        <TextBlock HorizontalAlignment="Left"  FontWeight="SemiBold" FontFamily="Trebuchet MS"  Margin="55,358,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="33" Width="109"/>
-        <TextBlock HorizontalAlignment="Left" FontWeight="SemiBold" FontFamily="Trebuchet MS"  Margin="174,362,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="25" Width="95">
-            <TextBlock.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius"/>
-                </Style>
-            </TextBlock.Resources>
-        </TextBlock>
+        <Border CornerRadius="10" HorizontalAlignment="Left"  Margin="55,358,0,0" VerticalAlignment="Top" Height="33" Width="109" Background="Red"/>
+        <TextBlock HorizontalAlignment="Left"  FontWeight="SemiBold" FontFamily="Trebuchet MS"  Margin="55,358,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="33" Width="113"/>
+
+        <Border CornerRadius="10">
+            <TextBlock HorizontalAlignment="Left" FontWeight="SemiBold" FontFamily="Trebuchet MS"  Margin="174,362,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="25" Width="95"/>
+        </Border>
+
     </Grid>
 </Window>
