@@ -4,12 +4,11 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:LetsGoDexTracker.Views.PokedexEntryWindow"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Title="Pokedex Entry Window" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
     mc:Ignorable="d">
 
-
-    <Grid Margin="200 50 200 50" Background="Snow">
+    <Grid Background="{ThemeResource CustomAcrylicBackgroundBrush}">
+        <Grid Margin="200 50 200 50" Background="Snow">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
@@ -63,5 +62,5 @@
 
 
     </Grid>
-
+        </Grid>
 </Window>
