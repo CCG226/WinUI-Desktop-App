@@ -8,12 +8,13 @@ using LetsGoDexTracker.ViewModels.Commands;
 using LetsGoDexTracker.PokemonModel;
 using System.Collections.ObjectModel;
 using LetsGoDexTracker.Service;
+using LetsGoDexTracker.Views.PokedexEntryWindow;
+
 namespace LetsGoDexTracker.ViewModels
 {
     public class BaseVM : INotifyPropertyChanged
     {
-        public SelectedCommand SelectCommand { get; set; }//if gridView is selected
-
+   
         public RoutingCommand RoutingCommand { get; set; }//if button pressed on View model
 
         public event PropertyChangedEventHandler PropertyChanged;//event type to handle property changed
@@ -53,6 +54,7 @@ namespace LetsGoDexTracker.ViewModels
             {
                 selectedPokemon = value;
                 OnPropertyChanged("SelectedPokemon");
+                OpenSelectedPokemonPokedexEntry();
             }
         }
 
@@ -67,7 +69,7 @@ namespace LetsGoDexTracker.ViewModels
             AvailablePokemon = NationalPokedex;
            
             RoutingCommand = new RoutingCommand(this);
-
+         
             
         }
 
@@ -93,9 +95,10 @@ namespace LetsGoDexTracker.ViewModels
 
         }
 
-        public void OpenSelectedPokemonPokedexEntry(Pokemon pokemon)//whenever pokemon is selected on grid 
+        public void OpenSelectedPokemonPokedexEntry()//whenever pokemon is selected on grid 
         {
-
+            EntryWindow pokedexPage = new EntryWindow(selectedPokemon);
+            pokedexPage.Activate();
         }
     }
 }
