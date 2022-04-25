@@ -9,7 +9,7 @@ using LetsGoDexTracker.PokemonModel;
 using System.Collections.ObjectModel;
 using LetsGoDexTracker.Service;
 using LetsGoDexTracker.Views.PokedexEntryWindow;
-
+using Microsoft.UI.Xaml.Navigation;
 namespace LetsGoDexTracker.ViewModels
 {
     public class BaseVM : INotifyPropertyChanged
@@ -97,6 +97,7 @@ namespace LetsGoDexTracker.ViewModels
 
         public void OpenSelectedPokemonPokedexEntry()//whenever pokemon is selected on grid 
         {
+            
             EntryWindow pokedexPage = new EntryWindow(selectedPokemon);
             pokedexPage.Activate();
         }

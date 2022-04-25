@@ -16,6 +16,7 @@ using Microsoft.UI.Xaml.Media.Animation;
 using muxc = Microsoft.UI.Xaml.Controls;
 using LetsGoDexTracker.ViewModels;
 using LetsGoDexTracker.Views;
+using Windows.UI.ViewManagement;
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
 
@@ -32,6 +33,7 @@ namespace LetsGoDexTracker
         {
             
             this.InitializeComponent();
+           
         }
 
         private double NavViewCompactModeThresholdWidth { get { return Nav.CompactModeThresholdWidth; } }//binds with XAML Mainwindow

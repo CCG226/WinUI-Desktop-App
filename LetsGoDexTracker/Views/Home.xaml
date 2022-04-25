@@ -73,7 +73,7 @@
             <GridView.ItemTemplate>
                 <DataTemplate>
                     <Grid>
-                        <Border BorderThickness="2" Background="Snow" BorderBrush="Black" Margin="0,0,0,-1"/>
+                        <Border BorderThickness="2" Background="White" BorderBrush="Black" Margin="0,0,0,-1"/>
 
                         <StackPanel Margin="20,20,20,34" Width="162">
 

@@ -27,6 +27,7 @@ namespace LetsGoDexTracker.Views.PokedexEntryWindow
         public EntryWindow(Pokemon pokemon)
         {
             this.InitializeComponent();
+
         }
     }
 }
