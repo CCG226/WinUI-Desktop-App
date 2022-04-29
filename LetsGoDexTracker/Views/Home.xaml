@@ -68,8 +68,9 @@
         <Button Command="{Binding RoutingCommand}" CommandParameter="Vermillion City"  Height="22" Margin="343,264,0,0" VerticalAlignment="Top" Width="22"  Opacity="0" ToolTipService.ToolTip="Vermillion City"/>
         <Button Command="{Binding RoutingCommand}" CommandParameter="Route 6"  Height="72" Margin="348,188,0,0" VerticalAlignment="Top" Width="14"  Opacity="0" ToolTipService.ToolTip="Route 6"/>
         <Button Command="{Binding RoutingCommand}" CommandParameter="Route 11"  Height="16" Margin="365,265,0,0" VerticalAlignment="Top" Width="79"  Opacity="0" ToolTipService.ToolTip="Route 11"/>
-
-        <GridView Margin="691,51,-753,-51" SelectedItem="{Binding SelectedPokemon, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" ItemsSource="{Binding AvailablePokemon}">
+        
+            <StackPanel>
+            <GridView Margin="691,51,-753,-51" SelectedItem="{Binding SelectedPokemon, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" ItemsSource="{Binding AvailablePokemon}">
             <GridView.ItemTemplate>
                 <DataTemplate>
                     <Grid>
@@ -90,11 +91,11 @@
                     </Grid>
                 </DataTemplate>
             </GridView.ItemTemplate>
-            <GridView.Items>
-
-
-            </GridView.Items>
+                <GridView.Items>
+                </GridView.Items>
         </GridView>
-        <Button Command="{Binding RoutingCommand}" CommandParameter="Kanto" Content="All" Background="CadetBlue" Foreground="Snow" Height="33" Margin="88,449,0,0" VerticalAlignment="Top" Width="78"/>
+        </StackPanel>
+    
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Kanto" Content="Select Region" Background="CadetBlue" Foreground="Snow" Height="33" Margin="88,449,0,0" VerticalAlignment="Top" Width="78"/>
     </Grid>
 </Page>

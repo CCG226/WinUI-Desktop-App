@@ -9,70 +9,49 @@
 
     <Grid Background="{ThemeResource CustomAcrylicBackgroundBrush}">
         <Grid Margin="300 50 300 50" Background="Snow">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="420"/>
-                <RowDefinition Height="320"/>
-                <RowDefinition Height="120"/>
 
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="550"/>
-                <ColumnDefinition Width="520"/>
-                <ColumnDefinition Width="420"/>
+            <ScrollViewer>
+                <StackPanel>
 
-            </Grid.ColumnDefinitions>
-            <Grid HorizontalAlignment="Left" Height="372" Margin="55,35,0,0" VerticalAlignment="Top" Width="472">
+                    <Grid HorizontalAlignment="Left" Height="372" Margin="55,35,0,0" VerticalAlignment="Top" Width="472" >
 
-                <Image Source="/Assets/kanto.png" Margin="-13,37,167,82"/>
-                <TextBlock HorizontalAlignment="Left" FontWeight="Bold" FontSize="18" FontFamily="Trebuchet MS"  TextWrapping="Wrap" Text="GengarGengarGen" VerticalAlignment="Top" Height="23" Width="171" RenderTransformOrigin="0.467,0.578" Margin="130,10,0,0"/>
-                <TextBlock HorizontalAlignment="Left" FontWeight="SemiBold" FontFamily="Trebuchet MS" Height="23" TextWrapping="Wrap" Text="Pokedex ID: 000" VerticalAlignment="Top" Width="121" Margin="0,15,0,0"/>
-                <Border CornerRadius="10" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="33" Width="109" Background="Red" Margin="0,295,0,0">
-                    <TextBlock Foreground="White" FontWeight="Thin" FontFamily="Trebuchet MS" HorizontalAlignment="Left" Height="23" Margin="26,5,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="74"/>
-                </Border>
+                        <Image Source="/Assets/kanto.png" Margin="-13,37,167,82"/>
+                        <TextBlock HorizontalAlignment="Left" FontWeight="Bold" FontSize="18" FontFamily="Trebuchet MS"  TextWrapping="Wrap" Text="GengarGengarGen" VerticalAlignment="Top" Height="23" Width="171" RenderTransformOrigin="0.467,0.578" Margin="130,10,0,0"/>
+                        <TextBlock HorizontalAlignment="Left" FontWeight="SemiBold" FontFamily="Trebuchet MS" Height="23" TextWrapping="Wrap" Text="Pokedex ID: 000" VerticalAlignment="Top" Width="121" Margin="0,15,0,0"/>
+                        <Border CornerRadius="10" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="33" Width="109" Background="Red" Margin="0,295,0,0">
+                            <TextBlock Foreground="White" FontWeight="Thin" FontFamily="Trebuchet MS" HorizontalAlignment="Left" Height="23" Margin="26,5,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="74"/>
+                        </Border>
 
-                <Border CornerRadius="10" HorizontalAlignment="Left"   VerticalAlignment="Top" Height="33" Width="109" Background="LightBlue" Margin="114,295,0,0">
-                    <TextBlock Foreground="White" FontWeight="Thin" FontFamily="Trebuchet MS" HorizontalAlignment="Left" Height="23" Margin="26,5,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="74"/>
-                </Border>
-                <TextBlock HorizontalAlignment="Left" Height="38" TextWrapping="Wrap" Text="Exclusivity:" VerticalAlignment="Top" Width="198" Margin="10,341,0,0"/>
-            </Grid>
-            <Grid Background="LightBlue" HorizontalAlignment="Center" Height="267" VerticalAlignment="Center" Width="472" CornerRadius="5" Grid.Row="1" > 
+                        <Border CornerRadius="10" HorizontalAlignment="Left"   VerticalAlignment="Top" Height="33" Width="109" Background="LightBlue" Margin="114,295,0,0">
+                            <TextBlock Foreground="White" FontWeight="Thin" FontFamily="Trebuchet MS" HorizontalAlignment="Left" Height="23" Margin="26,5,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="74"/>
+                        </Border>
+                        <TextBlock HorizontalAlignment="Left" Height="38" TextWrapping="Wrap" Text="Exclusivity:" VerticalAlignment="Top" Width="198" Margin="10,341,0,0"/>
+                    </Grid>
+                    <Grid Background="LightBlue" HorizontalAlignment="Left" Height="267" VerticalAlignment="Center" Width="454" CornerRadius="5" Margin="56,0,0,0">
 
-                <TextBlock HorizontalAlignment="Left" Height="36" FontWeight="Bold" FontFamily="Trebuchet MS" Margin="10,10,0,0" TextWrapping="Wrap" Text="Height:" VerticalAlignment="Top" Width="119"/>
-                <TextBlock HorizontalAlignment="Left" Height="36" FontWeight="Bold" FontFamily="Trebuchet MS" Margin="265,10,0,0" TextWrapping="Wrap" Text="Weight:" VerticalAlignment="Top" Width="119"/>
-                <TextBlock HorizontalAlignment="Left" Height="36" FontWeight="Bold" FontFamily="Trebuchet MS" Margin="0,87,0,0" TextWrapping="Wrap" Text="Category:" VerticalAlignment="Top" Width="119"/>
-                <TextBlock HorizontalAlignment="Left" Height="36" FontWeight="Bold" FontFamily="Trebuchet MS" Margin="265,87,0,0" TextWrapping="Wrap" Text="Hidden Ability: " VerticalAlignment="Top" Width="119"/>
-                <TextBlock HorizontalAlignment="Left" Height="36" FontWeight="Bold" FontFamily="Trebuchet MS" Margin="0,159,0,0" TextWrapping="Wrap" Text="Primary Ability: " VerticalAlignment="Top" Width="119"/>
-                <TextBlock HorizontalAlignment="Left" Height="36" FontWeight="Bold" FontFamily="Trebuchet MS" Margin="265,159,0,0" TextWrapping="Wrap" Text="Secondary Ability: " VerticalAlignment="Top" Width="119"/>
-                <TextBlock HorizontalAlignment="Left" Height="36" FontWeight="Bold" FontFamily="Trebuchet MS" Margin="125,204,0,0" TextWrapping="Wrap" Text=" Evolves at: " VerticalAlignment="Top" Width="119"/>
-            </Grid>
-            <Grid HorizontalAlignment="Left" Height="218" Margin="1,0,0,0" VerticalAlignment="Center" Width="411" CornerRadius="5" Background="{ThemeResource CustomAcrylicBackgroundBrush2}" Grid.Column="1">
-                <TextBlock HorizontalAlignment="Center" Height="Auto" FontFamily="Trebuchet MS" TextWrapping="Wrap" Text="Location(s):" VerticalAlignment="Top" Width="Auto"/>
-                <TextBlock HorizontalAlignment="Center" Height="Auto" FontFamily="Trebuchet MS" TextWrapping="Wrap" Text="Pokedex Entry: " VerticalAlignment="Center" Width="Auto" />
-            </Grid>
-            <Grid Margin="10,26,313,22" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2">
+                        <TextBlock HorizontalAlignment="Left" Height="36" FontWeight="Bold" FontFamily="Trebuchet MS" Margin="10,10,0,0" TextWrapping="Wrap" Text="Height:" VerticalAlignment="Top" Width="119"/>
+                        <TextBlock HorizontalAlignment="Left" Height="36" FontWeight="Bold" FontFamily="Trebuchet MS" Margin="265,10,0,0" TextWrapping="Wrap" Text="Weight:" VerticalAlignment="Top" Width="119"/>
+                        <TextBlock HorizontalAlignment="Left" Height="36" FontWeight="Bold" FontFamily="Trebuchet MS" Margin="0,87,0,0" TextWrapping="Wrap" Text="Category:" VerticalAlignment="Top" Width="119"/>
+                        <TextBlock HorizontalAlignment="Left" Height="36" FontWeight="Bold" FontFamily="Trebuchet MS" Margin="265,87,0,0" TextWrapping="Wrap" Text="Hidden Ability: " VerticalAlignment="Top" Width="119"/>
+                        <TextBlock HorizontalAlignment="Left" Height="36" FontWeight="Bold" FontFamily="Trebuchet MS" Margin="0,159,0,0" TextWrapping="Wrap" Text="Primary Ability: " VerticalAlignment="Top" Width="119"/>
+                        <TextBlock HorizontalAlignment="Left" Height="36" FontWeight="Bold" FontFamily="Trebuchet MS" Margin="265,159,0,0" TextWrapping="Wrap" Text="Secondary Ability: " VerticalAlignment="Top" Width="119"/>
+                        <TextBlock HorizontalAlignment="Left" Height="36" FontWeight="Bold" FontFamily="Trebuchet MS" Margin="125,204,0,0" TextWrapping="Wrap" Text=" Evolves at: " VerticalAlignment="Top" Width="119"/>
+                    </Grid>
+                    <Grid BorderBrush="White" HorizontalAlignment="Left" BorderThickness="4" Height="248" Width="519" CornerRadius="5" Background="{ThemeResource CustomAcrylicBackgroundBrush2}" Margin="50 10 50 50" >
+                        <TextBlock HorizontalAlignment="Left" Height="Auto" FontFamily="Trebuchet MS" FontSize="18" FontWeight="Bold" TextWrapping="Wrap" Text="Pokedex Entry:" VerticalAlignment="Top" Width="Auto" Margin="10,34,0,0"/>
+                        <TextBlock HorizontalAlignment="Left" Height="Auto" FontFamily="Trebuchet MS" FontSize="18"  FontWeight="Bold" TextWrapping="Wrap" Text="Location(s): " VerticalAlignment="Center" Width="Auto" Margin="10,0,0,0" />
+                        <TextBlock HorizontalAlignment="Left" Height="Auto" FontFamily="Trebuchet MS" FontWeight="Bold" FontSize="18" TextWrapping="Wrap" Text="Stats:" VerticalAlignment="Top" Width="Auto" Margin="10,175,0,0" />
+                        <TextBlock HorizontalAlignment="Left" Height="Auto" FontFamily="Trebuchet MS" TextWrapping="Wrap" Text="HP:" VerticalAlignment="Bottom" Width="Auto" Margin="400,0,0,10" />
+                        <TextBlock HorizontalAlignment="Left" Height="Auto" FontFamily="Trebuchet MS" TextWrapping="Wrap" Text="Attack:" VerticalAlignment="Bottom" Width="Auto" Margin="10,0,0,10" />
+                        <TextBlock HorizontalAlignment="Left" Height="Auto" FontFamily="Trebuchet MS" TextWrapping="Wrap" Text="Defense:" VerticalAlignment="Bottom" Width="Auto" Margin="302,0,0,10" />
+                        <TextBlock HorizontalAlignment="Left" Height="Auto" FontFamily="Trebuchet MS" TextWrapping="Wrap" Text="SpA:" VerticalAlignment="Bottom" Width="Auto" Margin="234,0,0,10" />
+                        <TextBlock HorizontalAlignment="Left" Height="Auto" FontFamily="Trebuchet MS" TextWrapping="Wrap" Text="SpD:" VerticalAlignment="Bottom" Width="Auto" Margin="166,0,0,10" />
+                        <TextBlock HorizontalAlignment="Left" Height="Auto" FontFamily="Trebuchet MS" TextWrapping="Wrap" Text="Speed:" VerticalAlignment="Bottom" Width="Auto" Margin="87,0,0,10" />
+                        <TextBlock HorizontalAlignment="Left" Height="Auto" FontFamily="Trebuchet MS" FontSize="16" TextWrapping="Wrap" Text="Total:" VerticalAlignment="Bottom" Width="Auto" Margin="203,0,0,34" />
+                    </Grid>
+                </StackPanel>
+            </ScrollViewer>
 
-                <Grid HorizontalAlignment="Left" VerticalAlignment="Top"  CornerRadius="10" Background="White" BorderBrush="DarkRed" BorderThickness="5" Margin="-1,175,0,0" Height="28" Width="119">
-                    <TextBlock HorizontalAlignment="Center" Text="HP:" FontSize="12" FontFamily="Trebuchet MS" VerticalAlignment="Center"/>
-                </Grid>
-                <Grid HorizontalAlignment="Left" VerticalAlignment="Top"  CornerRadius="10" Background="White" BorderBrush="DarkOrange" BorderThickness="5" Margin="0,142,0,0" Height="28" Width="119">
-                    <TextBlock HorizontalAlignment="Center" Text="Attack:" FontSize="12" FontFamily="Trebuchet MS" VerticalAlignment="Center"/>
-                </Grid>
-                <Grid HorizontalAlignment="Left" VerticalAlignment="Top" CornerRadius="10"  Background="White" BorderBrush="Goldenrod" BorderThickness="5" Margin="0,43,0,0" Height="28" Width="119">
-                    <TextBlock HorizontalAlignment="Center" Text="Defense:" FontSize="12" FontFamily="Trebuchet MS" VerticalAlignment="Center"/>
-                </Grid>
-                <Grid HorizontalAlignment="Left" VerticalAlignment="Top" CornerRadius="10" Background="White" BorderBrush="DarkBlue" BorderThickness="5" Height="28" Width="119" Margin="0,109,0,0">
-                    <TextBlock HorizontalAlignment="Center" Text="SpA:" FontSize="12" FontFamily="Trebuchet MS" VerticalAlignment="Center"/>
-                </Grid>
-                <Grid HorizontalAlignment="Left"  CornerRadius="10"  Background="White" BorderBrush="DarkGreen" BorderThickness="5" Margin="0,76,0,288" Height="28" Width="119">
-                    <TextBlock HorizontalAlignment="Center" Text="SpD:" FontSize="12" FontFamily="Trebuchet MS" VerticalAlignment="Center"/>
-                </Grid>
-                <Grid HorizontalAlignment="Left"  VerticalAlignment="Bottom" CornerRadius="10" Background="White" BorderBrush="Fuchsia" BorderThickness="5" Margin="-1,0,0,156" Height="28" Width="119">
-                    <TextBlock HorizontalAlignment="Center" Text="Speed:" FontSize="12" FontFamily="Trebuchet MS" VerticalAlignment="Center"/>
-                </Grid>
-                <Grid HorizontalAlignment="Left" VerticalAlignment="Top" CornerRadius="10"  Background="White" BorderBrush="DarkViolet" BorderThickness="5" >
-                    <TextBlock HorizontalAlignment="Left" Text="    Total:" FontSize="17" FontFamily="Trebuchet MS" VerticalAlignment="Top" Height="22" Width="100" Margin="15,5,0,0"/>
-                </Grid>
-            </Grid>
         </Grid>
 
     </Grid>
