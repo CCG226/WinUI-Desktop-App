@@ -27,7 +27,7 @@ namespace LetsGoDexTracker.Views
         public Home()
         {
             this.InitializeComponent();
-           
+            
         }
       
     }

@@ -1,4 +1,5 @@
 ﻿using LetsGoDexTracker.PokemonModel;
+using LetsGoDexTracker.ViewModels;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
@@ -27,7 +28,8 @@ namespace LetsGoDexTracker.Views.PokedexEntryWindow
         public EntryWindow(Pokemon pokemon)
         {
             this.InitializeComponent();
-
+     
+            EntryVM.PokemonEntry = pokemon;
         }
     }
 }
