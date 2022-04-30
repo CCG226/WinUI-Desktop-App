@@ -15,7 +15,7 @@ namespace LetsGoDexTracker.Service
 
     public class PokemonDataAccess
     {
-        public static string SELECTALL = "SELECT ID, DexID, Name, Image, PrimaryType, SecondaryType, Entry, location, LevelUp, Height, Weight, Abilities1, Abilities2, 'Hidden Ability', Category, Availability, HP, Attack, Defense, SpA, SpD, Speed, Total  from [pokedex]";
+        public static string SELECTALL = "SELECT ID, DexID, Name, Image, PrimaryType, SecondaryType, Entry, location, LevelUp, Height, Weight, Abilities1, Abilities2, Hidden, Category, Availability, HP, Attack, Defense, SpA, SpD, Speed, Total  from [pokedex]";
       
         
         public static ObservableCollection<Pokemon> DataAccess()
@@ -62,7 +62,7 @@ namespace LetsGoDexTracker.Service
                     
                     });
                 }
-
+                Dex[0].Hidden.Contains("H");
                 db.Close();
             }
             return Dex;

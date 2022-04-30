@@ -15,13 +15,85 @@ namespace LetsGoDexTracker.ViewModels
             get {
                
                 return pokemonEntry; }
-            set { pokemonEntry = value; 
+            set {  pokemonEntry = value;}
+        }
+        public string PokedexID
+        {
+            get
+            {
+                return "Pokedex ID:" + pokemonEntry.DexID;
+            }
+        }
+        public string Exclusivity
+        {
+            get
+            {
+                if (pokemonEntry.Exclusivity == 2)
+                {
+                    return "EXCLUSIVE: LETS GO PICKACHU ONLY!";
+                }
+                else if(pokemonEntry.Exclusivity == 3)
+                {
+                    return "EXCLUSIVE: Lets Go EEVEE ONLY!";
+                }
+                else
+                {
+                    return null;
+                }
+            }
+        }
+        public string FirstAbility
+        {
+            get
+            {
+                if(pokemonEntry.Abilities1 != null)
+                {
+                    return pokemonEntry.Abilities1;
+                }
+                else { return "None"; }
 
             }
         }
-        public string FormatIDOutput = "Pokedex ID:" + pokemonEntry.DexID;
-        public EntryVM()
+        public string SecondAbility
         {
+            get
+            {
+                if (pokemonEntry.Abilities2 != null)
+                {
+                    return pokemonEntry.Abilities2;
+                }
+                else { return "None"; }
+
+            }
+        }
+        public string HiddenAbility
+        {
+            get
+            {
+                if(pokemonEntry.Hidden != null)
+                {
+                    return PokemonEntry.Hidden;
+                }
+                else {  return "None"; }
+            }
+        }
+        public string EvolutionLine
+        {
+            get
+            {
+                if(pokemonEntry.Evolve.Contains("Level"))
+                {
+                    return "Evolves at " + pokemonEntry.Evolve;
+                }
+                else if(pokemonEntry.Evolve == null)
+                {
+                    return null;
+                }
+                else
+                {
+                    return "Evolves via " + pokemonEntry.Evolve;
+                }
+            }
         }
     }
 }
