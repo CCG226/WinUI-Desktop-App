@@ -17,13 +17,16 @@ namespace LetsGoDexTracker.ViewModels
                 return pokemonEntry; }
             set {  pokemonEntry = value;}
         }
-        public string PokedexID
-        {
-            get
-            {
-                return "Pokedex ID:" + pokemonEntry.DexID;
-            }
-        }
+
+        public string PokedexID {  get{ return "Pokedex ID:" + pokemonEntry.DexID;}}
+        public string Total { get { return "Total: " + PokemonEntry.Base_Stats; } }
+        public string HealthPoints { get { return "HP: " + PokemonEntry.HP; } }
+        public string Attack {  get { return "Attack: " + PokemonEntry.Attack;  } }
+        public string Defense { get { return "Defense: " + PokemonEntry.Defense; } }
+        public string SpAttack {  get { return "Special Attack: " + PokemonEntry.Special_Attack; } }
+        public string SpDefense { get { return "Special Defense: " + PokemonEntry.Special_Attack; } }
+        public string Speed { get { return "Speed: " + PokemonEntry.Speed; } }
+ 
         public string Exclusivity
         {
             get
@@ -46,7 +49,7 @@ namespace LetsGoDexTracker.ViewModels
         {
             get
             {
-                if(pokemonEntry.Abilities1 != null)
+                if(pokemonEntry.Abilities1 == "NULL")
                 {
                     return pokemonEntry.Abilities1;
                 }
@@ -58,7 +61,7 @@ namespace LetsGoDexTracker.ViewModels
         {
             get
             {
-                if (pokemonEntry.Abilities2 != null)
+                if (pokemonEntry.Abilities2 == "NULL")
                 {
                     return pokemonEntry.Abilities2;
                 }
@@ -70,7 +73,7 @@ namespace LetsGoDexTracker.ViewModels
         {
             get
             {
-                if(pokemonEntry.Hidden != null)
+                if(pokemonEntry.Hidden == "NULL")
                 {
                     return PokemonEntry.Hidden;
                 }
@@ -85,7 +88,7 @@ namespace LetsGoDexTracker.ViewModels
                 {
                     return "Evolves at " + pokemonEntry.Evolve;
                 }
-                else if(pokemonEntry.Evolve == null)
+                else if(pokemonEntry.Evolve == "NULL")
                 {
                     return null;
                 }
