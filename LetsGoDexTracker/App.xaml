@@ -11,23 +11,10 @@
                 <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls"/>
                 <ResourceDictionary>
                     <muxm:AcrylicBrush x:Key="CustomAcrylicBackgroundBrush" 
-        TintOpacity="0.9" TintColor="#FF000000" TintLuminosityOpacity="0.8" />
+        TintOpacity="0.1" TintColor="#FF000000" TintLuminosityOpacity="0.8" />
                     <muxm:AcrylicBrush x:Key="CustomAcrylicBackgroundBrush2" 
-        TintOpacity="0.9" TintColor="LightGray" TintLuminosityOpacity="0.8" />
-                    <muxm:AcrylicBrush x:Key="CustomAcrylicBackgroundBrushHP" 
-        TintOpacity="0.9" TintColor="Red" TintLuminosityOpacity="0.8" />
-                    <muxm:AcrylicBrush x:Key="CustomAcrylicBackgroundBrushAttack" 
-        TintOpacity="0.9" TintColor="orange" TintLuminosityOpacity="0.8" />
-                    <muxm:AcrylicBrush x:Key="CustomAcrylicBackgroundBrushDefense" 
-        TintOpacity="0.9" TintColor="yellow" TintLuminosityOpacity="0.8" />
-                    <muxm:AcrylicBrush x:Key="CustomAcrylicBackgroundBrushSpA" 
-        TintOpacity="0.9" TintColor="blue" TintLuminosityOpacity="0.8" />
-                    <muxm:AcrylicBrush x:Key="CustomAcrylicBackgroundBrushSpD" 
-        TintOpacity="0.9" TintColor="Green" TintLuminosityOpacity="0.8" />
-                    <muxm:AcrylicBrush x:Key="CustomAcrylicBackgroundBrushSpeed" 
-        TintOpacity="0.9" TintColor="pink" TintLuminosityOpacity="0.8" />
-                    <muxm:AcrylicBrush x:Key="CustomAcrylicBackgroundBrushTotal" 
-        TintOpacity="0.9" TintColor="Purple" TintLuminosityOpacity="0.8" />
+        TintOpacity="0.9" TintColor="LightGray" TintLuminosityOpacity="0.3" />
+               
                     <ResourceDictionary.ThemeDictionaries>
                         <ResourceDictionary x:Key="Default">
                             <LinearGradientBrush x:Key="NavigationViewTopPaneBackground"

@@ -5,10 +5,47 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LetsGoDexTracker.Views.PokedexEntryWindow;
+using LetsGoDexTracker.Service;
+using LetsGoDexTracker.ViewModels.DataAccess;
+
 namespace LetsGoDexTracker.ViewModels
 {
     public class EntryVM
     {
+        public EntryVM()
+        {
+            
+        }
+
+        public string PrimaryTypeBoxColor
+        {
+            get
+            {
+                if (PokemonEntry.PrimaryType == "NULL")
+                {
+                    return "White";
+                }
+                else
+                {
+                    return TypeLookUpChart.TypeBubble(pokemonEntry.PrimaryType);
+                }
+            }
+        }
+        public string SecondaryTypeBoxColor
+        {
+            get
+            {
+                if(PokemonEntry.SecondaryType == "NULL")
+                {
+                    return "White";
+                }
+                else
+                {
+                    return TypeLookUpChart.TypeBubble(pokemonEntry.SecondaryType);
+                }
+            }
+        }
+
         private static Pokemon pokemonEntry;  
         public static Pokemon PokemonEntry
         {
