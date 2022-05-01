@@ -62,7 +62,7 @@ namespace LetsGoDexTracker.Service
                     
                     });
                 }
-                Dex[0].Hidden.Contains("H");
+             
                 db.Close();
             }
             return Dex;

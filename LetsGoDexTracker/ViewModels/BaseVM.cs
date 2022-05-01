@@ -101,6 +101,7 @@ namespace LetsGoDexTracker.ViewModels
             EntryWindow pokedexPage = new EntryWindow(selectedPokemon);
             
             pokedexPage.Activate();
+            
         }
     }
 }

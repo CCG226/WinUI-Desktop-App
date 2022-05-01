@@ -29,7 +29,16 @@ namespace LetsGoDexTracker.Views
             this.InitializeComponent();
             
         }
-      
+
+        private void UnSelected(object sender, ItemClickEventArgs e)
+        {
+            GridViewItem unSelectMon = (GridViewItem)sender;
+            if(unSelectMon.IsSelected)
+            {
+                unSelectMon.IsSelected = false;
+
+            }
+        }
     }
     
    
