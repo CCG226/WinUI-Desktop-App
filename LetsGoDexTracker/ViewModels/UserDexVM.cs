@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using LetsGoDexTracker.Service;
 using LetsGoDexTracker.ViewModels.Commands;
+using LetsGoDexTracker.ViewModels.DataAccess;
 
 namespace LetsGoDexTracker.ViewModels
 {
@@ -15,13 +16,22 @@ namespace LetsGoDexTracker.ViewModels
     {
         public ObservableCollection<Pokemon> myPokedex { get; set; }
 
+    
+
         public UserDexVM()
         {
-            myPokedex = PokemonDataAccess.DataAccess();
+            myPokedex = PokemonDataAccess.Dex;
             SelectedCommand = new SelectedCommand(this);
+          
+            for(int i = 0; i < myPokedex.Count;i++)
+           {
+                myPokedex[i].PrimaryType = TypeLookUpChart.TypeBubble(myPokedex[i].PrimaryType);
+           }
+        
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
+
         private void OnPropertyChanged(string propertyName)//fires event
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));//make sure event exists and invoke a event if property changes in view or model

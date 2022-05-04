@@ -12,17 +12,17 @@
         <Uvm:UserDexVM x:Key="Uvm"/>
     </Page.Resources>
     <Grid DataContext="{StaticResource Uvm}">
-        <ScrollViewer>
+        
         <StackPanel>
             <TextBlock HorizontalAlignment="Center" Text="Your Personal Dex" FontSize="50" Height="100" Width="auto" />
             <TextBlock HorizontalAlignment="Center" Text="Keep track of all the pokemon you've caught so far here!" FontSize="30" Height="100" Width="auto" />
                 <ListView HorizontalAlignment="Left" Height="auto" Width="400" ItemsSource="{Binding myPokedex}" Background="White" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                            <Grid  BorderBrush="Green" BorderThickness="3" Height="100" Width="auto">
+                            <Grid  BorderBrush="{Binding PrimaryType}" BorderThickness="3" Height="100" Width="auto">
                                 <Image Source="{Binding Image}" HorizontalAlignment="Left" Height="50" Width="50"/>
                                 <TextBlock Text="{Binding Name}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Margin="10 10 130 10" FontWeight="Bold"/>
-
+                           
                                 <Button HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10 10 70 10" Height="50" Width="50" Background="White" BorderBrush="Gray"/>
                         </Grid>
                     </DataTemplate>
@@ -32,6 +32,6 @@
                 </ListView>
            
         </StackPanel>
-        </ScrollViewer>
+
     </Grid>
 </Page>

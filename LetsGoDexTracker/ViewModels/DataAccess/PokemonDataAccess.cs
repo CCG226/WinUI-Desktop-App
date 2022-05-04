@@ -17,13 +17,11 @@ namespace LetsGoDexTracker.Service
     {
         public static string SELECTALL = "SELECT ID, DexID, Name, Image, PrimaryType, SecondaryType, Entry, location, LevelUp, Height, Weight, Abilities1, Abilities2, Hidden, Category, Availability, HP, Attack, Defense, SpA, SpD, Speed, Total  from [pokedex]";
       
-        
-        public static ObservableCollection<Pokemon> DataAccess()
+        public static ObservableCollection<Pokemon> Dex = new ObservableCollection<Pokemon>();
+
+        public static void DataAccess()
         {
 
-            ObservableCollection<Pokemon> Dex = new ObservableCollection<Pokemon>();
-
-            
             string dbpath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Database\KantoPokedex.db");
 
             using (SqliteConnection db = new SqliteConnection($"Filename={dbpath}"))
@@ -65,7 +63,7 @@ namespace LetsGoDexTracker.Service
              
                 db.Close();
             }
-            return Dex;
+          
         }
 
     }

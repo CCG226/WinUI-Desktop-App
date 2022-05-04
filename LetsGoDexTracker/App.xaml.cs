@@ -34,7 +34,7 @@ namespace LetsGoDexTracker
         public App()
         {
             this.InitializeComponent();
-
+            PokemonDataAccess.DataAccess();
             
 
 

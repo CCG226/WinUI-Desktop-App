@@ -68,7 +68,7 @@ namespace LetsGoDexTracker.ViewModels
         {
             SelectedArea = "Available Pokemon in Kanto:";
             
-            NationalPokedex = PokemonDataAccess.DataAccess();
+            NationalPokedex = PokemonDataAccess.Dex;
             AvailablePokemon = NationalPokedex;
            
             RoutingCommand = new RoutingCommand(this);
