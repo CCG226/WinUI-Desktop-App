@@ -70,7 +70,7 @@
         <Button Command="{Binding RoutingCommand}" CommandParameter="Route 11"  Height="16" Margin="365,265,0,0" VerticalAlignment="Top" Width="79"  Opacity="0" ToolTipService.ToolTip="Route 11"/>
         
             <StackPanel>
-            <GridView x:Name="List" ItemClick="UnSelected"  Margin="691,51,-753,-51" SelectedItem="{Binding SelectedPokemon, Mode=TwoWay, UpdateSourceTrigger=Explicit}" ItemsSource="{Binding AvailablePokemon}">
+            <GridView  Margin="691,51,-753,-51" SelectedItem="{Binding SelectedPokemon, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" ItemsSource="{Binding AvailablePokemon}">
              
                 <GridView.ItemTemplate>
                 <DataTemplate>
@@ -98,6 +98,6 @@
         </GridView>
         </StackPanel>
     
-        <Button Command="{Binding RoutingCommand}" CommandParameter="Kanto" Content="Select Region" Background="CadetBlue" Foreground="Snow" Height="33" Margin="88,449,0,0" VerticalAlignment="Top" Width="78"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Kanto" Content="Select Entire Region" Background="CadetBlue" Foreground="Snow" Height="33" Margin="88,449,0,0" VerticalAlignment="Top" Width="150"/>
     </Grid>
 </Page>

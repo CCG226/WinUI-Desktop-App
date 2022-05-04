@@ -52,9 +52,12 @@ namespace LetsGoDexTracker.ViewModels
             get { return selectedPokemon; }
             set
             {
-                selectedPokemon = value;
-                OnPropertyChanged("SelectedPokemon");
-                OpenSelectedPokemonPokedexEntry();
+                if (value != null)
+                {
+                    selectedPokemon = value;
+                    OnPropertyChanged("SelectedPokemon");
+                    OpenSelectedPokemonPokedexEntry();
+                }
             }
         }
 
@@ -97,7 +100,7 @@ namespace LetsGoDexTracker.ViewModels
 
         public void OpenSelectedPokemonPokedexEntry()//whenever pokemon is selected on grid 
         {
-            
+            //possibly fix here
             EntryWindow pokedexPage = new EntryWindow(selectedPokemon);
             
             pokedexPage.Activate();

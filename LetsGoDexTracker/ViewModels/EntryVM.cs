@@ -12,24 +12,10 @@ namespace LetsGoDexTracker.ViewModels
 {
     public class EntryVM
     {
-        public EntryVM()
-        {
-            
-        }
 
         public string PrimaryTypeBoxColor
         {
-            get
-            {
-                if (PokemonEntry.PrimaryType == "NULL")
-                {
-                    return "White";
-                }
-                else
-                {
-                    return TypeLookUpChart.TypeBubble(pokemonEntry.PrimaryType);
-                }
-            }
+            get {  return TypeLookUpChart.TypeBubble(pokemonEntry.PrimaryType);  }
         }
         public string SecondaryTypeBoxColor
         {
@@ -46,12 +32,10 @@ namespace LetsGoDexTracker.ViewModels
             }
         }
 
-        private static Pokemon pokemonEntry;  
-        public static Pokemon PokemonEntry
+        private static  Pokemon pokemonEntry;  
+        public static  Pokemon PokemonEntry
         {
-            get {
-               
-                return pokemonEntry; }
+            get { return pokemonEntry; }
             set {  pokemonEntry = value;}
         }
 

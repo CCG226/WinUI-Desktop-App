@@ -30,15 +30,7 @@ namespace LetsGoDexTracker.Views
             
         }
 
-        private void UnSelected(object sender, ItemClickEventArgs e)
-        {
-            GridViewItem unSelectMon = (GridViewItem)sender;
-            if(unSelectMon.IsSelected)
-            {
-                unSelectMon.IsSelected = false;
-
-            }
-        }
+    
     }
     
    

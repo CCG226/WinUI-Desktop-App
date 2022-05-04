@@ -54,12 +54,12 @@
                         <TextBlock HorizontalAlignment="Left" Height="Auto" FontFamily="Trebuchet MS" FontSize="18"  FontWeight="Bold" TextWrapping="Wrap" Text="Location(s): " VerticalAlignment="Center" Width="Auto" Margin="10,0,0,0" />
                         <TextBlock HorizontalAlignment="Left" Height="36" FontFamily="Trebuchet MS" FontSize="10"  TextWrapping="Wrap" Text="{Binding PokemonEntry.DexEntry}" VerticalAlignment="Top" Width="495" Margin="8,65,0,0" />
                         <TextBlock HorizontalAlignment="Left" Height="Auto" FontFamily="Trebuchet MS" FontWeight="Bold" FontSize="18" TextWrapping="Wrap" Text="Stats:" VerticalAlignment="Top" Width="Auto" Margin="10,175,0,0" />
-                        <TextBlock HorizontalAlignment="Left" Height="Auto" FontFamily="Trebuchet MS" TextWrapping="Wrap" FontSize="9" Text="{Binding HealthPoints}" VerticalAlignment="Bottom" Width="Auto" Margin="400,0,0,10" />
-                        <TextBlock HorizontalAlignment="Left" Height="Auto" FontFamily="Trebuchet MS" TextWrapping="Wrap" FontSize="9"  Text="{Binding Attack}" VerticalAlignment="Bottom" Width="Auto" Margin="10,0,0,10" />
-                        <TextBlock HorizontalAlignment="Left" Height="Auto" FontFamily="Trebuchet MS" TextWrapping="Wrap" FontSize="9"  Text="{Binding Defense}" VerticalAlignment="Bottom" Width="Auto" Margin="330,0,0,10" />
-                        <TextBlock HorizontalAlignment="Left" Height="Auto" FontFamily="Trebuchet MS" TextWrapping="Wrap" FontSize="9"  Text="{Binding SpAttack}" VerticalAlignment="Bottom" Width="Auto" Margin="240,0,0,10" />
-                        <TextBlock HorizontalAlignment="Left" Height="Auto" FontFamily="Trebuchet MS" TextWrapping="Wrap" FontSize="9"  Text="{Binding SpDefense}" VerticalAlignment="Bottom" Width="Auto" Margin="140,0,0,10" />
-                        <TextBlock HorizontalAlignment="Left" Height="Auto" FontFamily="Trebuchet MS" TextWrapping="Wrap" FontSize="9"  Text="{Binding Speed}" VerticalAlignment="Bottom" Width="Auto" Margin="75,0,0,10" />
+                        <TextBlock HorizontalAlignment="Left" Height="Auto" FontFamily="Trebuchet MS" TextWrapping="Wrap" FontSize="11" Text="{Binding HealthPoints}" VerticalAlignment="Bottom" Width="Auto" Margin="400,0,0,10" />
+                        <TextBlock HorizontalAlignment="Left" Height="Auto" FontFamily="Trebuchet MS" TextWrapping="Wrap" FontSize="11"  Text="{Binding Attack}" VerticalAlignment="Bottom" Width="Auto" Margin="10,0,0,10" />
+                        <TextBlock HorizontalAlignment="Left" Height="Auto" FontFamily="Trebuchet MS" TextWrapping="Wrap" FontSize="11"  Text="{Binding Defense}" VerticalAlignment="Bottom" Width="Auto" Margin="330,0,0,10" />
+                        <TextBlock HorizontalAlignment="Left" Height="Auto" FontFamily="Trebuchet MS" TextWrapping="Wrap" FontSize="11"  Text="{Binding SpAttack}" VerticalAlignment="Bottom" Width="Auto" Margin="240,0,0,10" />
+                        <TextBlock HorizontalAlignment="Left" Height="Auto" FontFamily="Trebuchet MS" TextWrapping="Wrap" FontSize="11"  Text="{Binding SpDefense}" VerticalAlignment="Bottom" Width="Auto" Margin="140,0,0,10" />
+                        <TextBlock HorizontalAlignment="Left" Height="Auto" FontFamily="Trebuchet MS" TextWrapping="Wrap" FontSize="11"  Text="{Binding Speed}" VerticalAlignment="Bottom" Width="Auto" Margin="75,0,0,10" />
                         <TextBlock HorizontalAlignment="Left" Height="Auto" FontFamily="Trebuchet MS" FontSize="16" TextWrapping="Wrap" Text="{Binding Total}" VerticalAlignment="Bottom" Width="Auto" Margin="180,0,0,34" />
                     </Grid>
                 </StackPanel>

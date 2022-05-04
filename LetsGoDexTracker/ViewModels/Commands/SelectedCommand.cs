@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LetsGoDexTracker.PokemonModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,13 +10,14 @@ namespace LetsGoDexTracker.ViewModels.Commands
 {
     public class SelectedCommand : ICommand
     {
-   //   MyDexVM VM { get; set; }
+        
 
-    //   public SelectedCommand(MyDexVM vm)
-     //   {
-     //       VM = vm;
-     //   }
-    //
+        public BaseVM VM { get; set; }
+
+        public SelectedCommand(BaseVM vm)
+        {
+            VM = vm;
+        }
         public event EventHandler CanExecuteChanged;
 
         public bool CanExecute(object parameter)

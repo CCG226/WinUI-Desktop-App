@@ -11,7 +11,7 @@ namespace LetsGoDexTracker.ViewModels.DataAccess
 
         public static string TypeBubble(string pokemonsType) 
         {
-            var type = pokemonsType switch
+            var typecolor = pokemonsType switch
             {
                 nameof(TypeEnums.Normal) => "Tan",
                 nameof(TypeEnums.Fighting) => "Firebrick",
@@ -34,7 +34,7 @@ namespace LetsGoDexTracker.ViewModels.DataAccess
                 _ => null
             };
 
-            return type;
+            return typecolor;
         }
     }
 }
