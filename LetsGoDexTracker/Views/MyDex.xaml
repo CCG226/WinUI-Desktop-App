@@ -5,14 +5,32 @@
     xmlns:local="using:LetsGoDexTracker.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Uvm="using:LetsGoDexTracker.ViewModels"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
-    <Grid>
-       
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <Button x:Name="myButton" Click="myButton_Click">Click Me</Button>
-            </StackPanel>
-        
+    <Page.Resources>
+        <Uvm:UserDexVM x:Key="Uvm"/>
+    </Page.Resources>
+    <Grid DataContext="{StaticResource Uvm}">
+        <ScrollViewer>
+        <StackPanel>
+            <TextBlock HorizontalAlignment="Center" Text="Your Personal Dex" FontSize="50" Height="100" Width="auto" />
+            <TextBlock HorizontalAlignment="Center" Text="Keep track of all the pokemon you've caught so far here!" FontSize="30" Height="100" Width="auto" />
+            <ListView HorizontalAlignment="Left" Height="150" Width="750" ItemsSource="{Binding myPokedex}" Background="White">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                                <Image Source="{Binding Image}" HorizontalAlignment="Left" Height="50" Width="50"/>
+                                <TextBlock Text="{Binding Name}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Margin="50 50 350 50" />
+                            <CheckBox/>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                    <ListViewItem>
+                    </ListViewItem>
+                </ListView>
+           
+        </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Page>

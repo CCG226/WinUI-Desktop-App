@@ -27,9 +27,6 @@ namespace LetsGoDexTracker.Views
         {
             this.InitializeComponent();
         }
-        private void myButton_Click(object sender, RoutedEventArgs e)
-        {
-            myButton.Content = "Clicked";
-        }
+       
     }
 }

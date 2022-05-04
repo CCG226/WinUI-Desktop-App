@@ -12,9 +12,9 @@ namespace LetsGoDexTracker.ViewModels.Commands
     {
         
 
-        public BaseVM VM { get; set; }
+        public UserDexVM VM { get; set; }
 
-        public SelectedCommand(BaseVM vm)
+        public SelectedCommand(UserDexVM vm)
         {
             VM = vm;
         }
