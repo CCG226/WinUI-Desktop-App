@@ -61,15 +61,13 @@ namespace LetsGoDexTracker.ViewModels
             }
         }
 
-      
-        public ObservableCollection<Pokemon> NationalPokedex { get; set; }
 
         public BaseVM()
         {
             SelectedArea = "Available Pokemon in Kanto:";
             
-            NationalPokedex = PokemonDataAccess.Dex;
-            AvailablePokemon = NationalPokedex;
+            AvailablePokemon = PokemonDataAccess.Dex;
+    
            
             RoutingCommand = new RoutingCommand(this);
          
@@ -81,7 +79,7 @@ namespace LetsGoDexTracker.ViewModels
             string newArea = Area.ToString();
             if(newArea.Contains("Kanto"))
             {
-                AvailablePokemon = NationalPokedex;
+                AvailablePokemon = PokemonDataAccess.Dex;
                 SelectedArea = "Available Pokemon in Kanto:";
                 return;
             }
@@ -93,14 +91,14 @@ namespace LetsGoDexTracker.ViewModels
             {
                 SelectedArea = "Available Pokemon in " + newArea + ":";
             }
-            var Pokemonfilter = NationalPokedex.Where(pokemon => pokemon.Location.Contains(newArea));
+            var Pokemonfilter = PokemonDataAccess.Dex.Where(pokemon => pokemon.Location.Contains(newArea));
             AvailablePokemon =  new ObservableCollection<Pokemon>(Pokemonfilter);
 
         }
 
         public void OpenSelectedPokemonPokedexEntry()//whenever pokemon is selected on grid 
         {
-            //possibly fix here
+            
             EntryWindow pokedexPage = new EntryWindow(selectedPokemon);
             
             pokedexPage.Activate();

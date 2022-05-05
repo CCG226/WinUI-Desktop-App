@@ -55,5 +55,7 @@ namespace LetsGoDexTracker.PokemonModel
         public int Base_Stats { get; set; }
 
         public string bColor { get; set; }
+
+        public string isChecked { get; set; }
     }
 }

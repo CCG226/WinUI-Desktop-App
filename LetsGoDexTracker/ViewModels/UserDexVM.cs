@@ -16,15 +16,25 @@ namespace LetsGoDexTracker.ViewModels
     {
         public ObservableCollection<Pokemon> myPokedex { get; set; }
 
-    
+        private Pokemon selectedPokemon;
+        public Pokemon SelectedPokemon
+        {
+            get { return selectedPokemon; }
+            set
+            {
+                if (value != null)
+                {
+                    selectedPokemon = value;
+                    OnPropertyChanged("SelectedPokemon");
+         
+                }
+            }
+        }
 
         public UserDexVM()
         {
-          
             myPokedex = PokemonDataAccess.Dex;
             SelectedCommand = new SelectedCommand(this);
-          
-        
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -34,6 +44,20 @@ namespace LetsGoDexTracker.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));//make sure event exists and invoke a event if property changes in view or model
         }
 
+        public void SwapMarks(Pokemon selected)
+        {
+            if (selected.isChecked == "/Assets/isChecked.png")
+            {
+                selected.isChecked = "/Assets/isNotChecked.png";
+            }
+            else
+            {
+                selected.isChecked = "/Assets/isChecked.png";
+            }
+
+        }
+
         public SelectedCommand SelectedCommand { get; set; }
+
     }
 }
