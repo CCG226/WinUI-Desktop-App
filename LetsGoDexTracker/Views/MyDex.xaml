@@ -19,7 +19,7 @@
                 <ListView HorizontalAlignment="Left" Height="auto" Width="400" ItemsSource="{Binding myPokedex}" Background="White" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                            <Grid  BorderBrush="{Binding PrimaryType}" BorderThickness="3" Height="100" Width="auto">
+                            <Grid  BorderBrush="{Binding bColor}" BorderThickness="3" Height="100" Width="auto">
                                 <Image Source="{Binding Image}" HorizontalAlignment="Left" Height="50" Width="50"/>
                                 <TextBlock Text="{Binding Name}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Margin="10 10 130 10" FontWeight="Bold"/>
                            

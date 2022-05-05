@@ -9,6 +9,7 @@ using LetsGoDexTracker.PokemonModel;
 using System.IO;
 using Windows.Storage;
 using System.Collections.ObjectModel;
+using LetsGoDexTracker.ViewModels.DataAccess;
 
 namespace LetsGoDexTracker.Service
 {
@@ -60,7 +61,10 @@ namespace LetsGoDexTracker.Service
                     
                     });
                 }
-             
+                for(int i = 0; i < Dex.Count; i++)
+                {
+                 Dex[i].bColor = TypeLookUpChart.TypeBubble(Dex[i].PrimaryType);
+                }
                 db.Close();
             }
           

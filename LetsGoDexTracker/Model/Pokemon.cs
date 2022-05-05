@@ -53,5 +53,7 @@ namespace LetsGoDexTracker.PokemonModel
         public int Speed { get; set; }
 
         public int Base_Stats { get; set; }
+
+        public string bColor { get; set; }
     }
 }

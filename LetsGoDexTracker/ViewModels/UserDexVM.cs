@@ -20,13 +20,10 @@ namespace LetsGoDexTracker.ViewModels
 
         public UserDexVM()
         {
+          
             myPokedex = PokemonDataAccess.Dex;
             SelectedCommand = new SelectedCommand(this);
           
-            for(int i = 0; i < myPokedex.Count;i++)
-           {
-                myPokedex[i].PrimaryType = TypeLookUpChart.TypeBubble(myPokedex[i].PrimaryType);
-           }
         
         }
 
