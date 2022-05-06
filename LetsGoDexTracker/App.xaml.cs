@@ -27,6 +27,7 @@ namespace LetsGoDexTracker
     /// </summary>
     public partial class App : Application
     {
+
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -36,10 +37,9 @@ namespace LetsGoDexTracker
             this.InitializeComponent();
             PokemonDataAccess.DataAccess();
             
-
-
         }
-
+        
+            
         /// <summary>
         /// Invoked when the application is launched normally by the end user.  Other entry points
         /// will be used such as when the application is launched to open a specific file.

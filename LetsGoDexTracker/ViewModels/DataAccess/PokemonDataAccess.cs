@@ -16,8 +16,10 @@ namespace LetsGoDexTracker.Service
 
     public class PokemonDataAccess
     {
-        public static string SELECTALL = "SELECT ID, DexID, captured, Name, Image, PrimaryType, SecondaryType, Entry, location, LevelUp, Height, Weight, Abilities1, Abilities2, Hidden, Category, Availability, HP, Attack, Defense, SpA, SpD, Speed, Total  from [pokedex]";
+        public static string READ = "SELECT ID, DexID, captured, Name, Image, PrimaryType, SecondaryType, Entry, location, LevelUp, Height, Weight, Abilities1, Abilities2, Hidden, Category, Availability, HP, Attack, Defense, SpA, SpD, Speed, Total  from [pokedex]";
       
+         
+
         public static ObservableCollection<Pokemon> Dex = new ObservableCollection<Pokemon>();
 
         public static void DataAccess()
@@ -28,7 +30,7 @@ namespace LetsGoDexTracker.Service
             using (SqliteConnection db = new SqliteConnection($"Filename={dbpath}"))
             {
                 db.Open();
-                SqliteCommand insert = new SqliteCommand(SELECTALL, db);
+                SqliteCommand insert = new SqliteCommand(READ, db);
                 SqliteDataReader query = insert.ExecuteReader();
                 while (query.Read())
                 {
@@ -71,5 +73,25 @@ namespace LetsGoDexTracker.Service
           
         }
 
+        public static void DataUpdate(Pokemon pokemon)
+        {
+            string dbpath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Database\KantoPokedex.db");
+
+            using (SqliteConnection db = new SqliteConnection($"Filename={dbpath}"))
+            {
+                db.Open();
+                SqliteCommand insertCommand = new SqliteCommand();
+                insertCommand.Connection = db;
+
+                string WRITE = $"UPDATE [pokedex] SET captured = @check WHERE ID = @id";
+                insertCommand.CommandText = WRITE;
+                insertCommand.Parameters.AddWithValue("@check", pokemon.isChecked);
+                insertCommand.Parameters.AddWithValue("@id", pokemon.Id);
+                insertCommand.ExecuteReader();
+            
+             
+                db.Close();
+            }
+        }
     }
 }

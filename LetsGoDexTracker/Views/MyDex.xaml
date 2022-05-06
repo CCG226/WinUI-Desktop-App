@@ -14,9 +14,10 @@
     <Grid DataContext="{StaticResource Uvm}" Name="uvm">
         
         <StackPanel>
-            <TextBlock HorizontalAlignment="Center" Text="Your Personal Dex" FontSize="50" Height="100" Width="auto" />
-            <TextBlock HorizontalAlignment="Center" Text="Keep track of all the pokemon you've caught so far here!" FontSize="30" Height="100" Width="auto" />
-            <ListView x:Name="list" HorizontalAlignment="Left" Height="auto" Width="400" ItemsSource="{Binding myPokedex, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Background="White" >
+            <TextBlock HorizontalAlignment="Center" Text="Your Personal Dex" FontSize="50"  />
+            <TextBlock HorizontalAlignment="Center" Text="Keep track of all the pokemon you've caught so far here!" FontSize="30" />
+            <TextBlock HorizontalAlignment="Center" FontSize="16" FontWeight="Bold" Text="{Binding CaughtText}" Height="100"/>
+            <ListView  HorizontalAlignment="Left" Height="auto" Width="400" ItemsSource="{Binding myPokedex, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Background="White" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                             <Grid  BorderBrush="{Binding bColor}" BorderThickness="3" Height="100" Width="auto">
@@ -34,7 +35,6 @@
                     <ListViewItem>
                     </ListViewItem>
                 </ListView>
-           
         </StackPanel>
 
     </Grid>

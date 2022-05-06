@@ -16,27 +16,33 @@ namespace LetsGoDexTracker.ViewModels
     {
         public ObservableCollection<Pokemon> myPokedex { get; set; }
 
-        private Pokemon selectedPokemon;
-        public Pokemon SelectedPokemon
+        private string caughtText;
+        public string CaughtText
         {
-            get { return selectedPokemon; }
+            get { return caughtText; }
             set
             {
-                if (value != null)
-                {
-                    selectedPokemon = value;
-                    OnPropertyChanged("SelectedPokemon");
-             
-                }
+                caughtText = value;
+                OnPropertyChanged("CaughtText");
             }
         }
 
+        public int CaughtSoFar { get; set; }
+       
 
 
         public UserDexVM()
         {
             myPokedex = PokemonDataAccess.Dex;
             SelectedCommand = new SelectedCommand(this);
+            foreach(Pokemon p in myPokedex)
+            {
+                if(p.isChecked == "/Assets/isChecked.png")
+                {
+                    CaughtSoFar++;
+                }
+            }
+            CaughtText = $"Pokedex Count: {CaughtSoFar}/171";
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -51,19 +57,24 @@ namespace LetsGoDexTracker.ViewModels
             if (pokemon.isChecked == "/Assets/isChecked.png")
             {
                 pokemon.isChecked = "/Assets/isNotChecked.png";
+                CaughtSoFar--;
             }
             else
             {
                 pokemon.isChecked = "/Assets/isChecked.png";
+                CaughtSoFar++;
             }
             for(int i = 0; i < myPokedex.Count; i++)
             {
                 if(pokemon.Id == myPokedex[i].Id)
                 {
                     myPokedex[i] = pokemon;
+                  
                 }
             }
             OnPropertyChanged("myPokedex");
+            CaughtText = $"Pokedex Count: {CaughtSoFar}/171";
+            PokemonDataAccess.DataUpdate(pokemon);
         }
 
         public SelectedCommand SelectedCommand { get; set; }
