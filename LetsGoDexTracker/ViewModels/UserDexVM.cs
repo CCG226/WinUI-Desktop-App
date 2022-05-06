@@ -31,6 +31,8 @@ namespace LetsGoDexTracker.ViewModels
             }
         }
 
+
+
         public UserDexVM()
         {
             myPokedex = PokemonDataAccess.Dex;
@@ -44,15 +46,15 @@ namespace LetsGoDexTracker.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));//make sure event exists and invoke a event if property changes in view or model
         }
 
-        public void SwapMarks(Pokemon selected)
+        public void SwapMarks()
         {
-            if (selected.isChecked == "/Assets/isChecked.png")
+            if (SelectedPokemon.isChecked == "/Assets/isChecked.png")
             {
-                selected.isChecked = "/Assets/isNotChecked.png";
+                SelectedPokemon.isChecked = "/Assets/isNotChecked.png";
             }
             else
             {
-                selected.isChecked = "/Assets/isChecked.png";
+                SelectedPokemon.isChecked = "/Assets/isChecked.png";
             }
 
         }

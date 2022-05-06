@@ -32,10 +32,7 @@ namespace LetsGoDexTracker.ViewModels.Commands
 
         public void Execute(object parameter)
         {
-            Pokemon selected = parameter as Pokemon;
-
-            VM.SwapMarks(selected);
-
+            VM.SwapMarks();
         }
     }
 }
