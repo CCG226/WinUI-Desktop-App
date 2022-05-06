@@ -22,13 +22,19 @@ namespace LetsGoDexTracker.ViewModels.Commands
 
         public bool CanExecute(object parameter)
         {
+            Pokemon pokemon = parameter as Pokemon;
+            if (pokemon != null)
+            { 
+                return true;
+            }
+            return false;
 
-            return true;
         }
 
         public void Execute(object parameter)
         {
-            VM.SwapMarks();
+            Pokemon pokemon = parameter as Pokemon;
+            VM.SwapMarks(pokemon);
         }
     }
 }

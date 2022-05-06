@@ -26,7 +26,7 @@ namespace LetsGoDexTracker.ViewModels
                 {
                     selectedPokemon = value;
                     OnPropertyChanged("SelectedPokemon");
-                //    SwapMarks();
+             
                 }
             }
         }
@@ -46,17 +46,24 @@ namespace LetsGoDexTracker.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));//make sure event exists and invoke a event if property changes in view or model
         }
 
-        public void SwapMarks()
+        public void SwapMarks(Pokemon pokemon)
         {
-            if (SelectedPokemon.isChecked == "/Assets/isChecked.png")
+            if (pokemon.isChecked == "/Assets/isChecked.png")
             {
-                SelectedPokemon.isChecked = "/Assets/isNotChecked.png";
+                pokemon.isChecked = "/Assets/isNotChecked.png";
             }
             else
             {
-                SelectedPokemon.isChecked = "/Assets/isChecked.png";
+                pokemon.isChecked = "/Assets/isChecked.png";
             }
-
+            for(int i = 0; i < myPokedex.Count; i++)
+            {
+                if(pokemon.Id == myPokedex[i].Id)
+                {
+                    myPokedex[i] = pokemon;
+                }
+            }
+            OnPropertyChanged("myPokedex");
         }
 
         public SelectedCommand SelectedCommand { get; set; }

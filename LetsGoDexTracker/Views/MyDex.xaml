@@ -16,14 +16,14 @@
         <StackPanel>
             <TextBlock HorizontalAlignment="Center" Text="Your Personal Dex" FontSize="50" Height="100" Width="auto" />
             <TextBlock HorizontalAlignment="Center" Text="Keep track of all the pokemon you've caught so far here!" FontSize="30" Height="100" Width="auto" />
-            <ListView x:Name="list" HorizontalAlignment="Left" Height="auto" Width="400" ItemsSource="{Binding myPokedex}" SelectedItem="{Binding SelectedPokemon, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Background="White" >
+            <ListView x:Name="list" HorizontalAlignment="Left" Height="auto" Width="400" ItemsSource="{Binding myPokedex, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Background="White" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                             <Grid  BorderBrush="{Binding bColor}" BorderThickness="3" Height="100" Width="auto">
                                 <Image Source="{Binding Image}" HorizontalAlignment="Left" Height="50" Width="50"/>
                                 <TextBlock Text="{Binding Name}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Margin="10 10 130 10" FontWeight="Bold"/>
 
-                            <Button HorizontalAlignment="Right" Command="{Binding ElementName=uvm, Path=DataContext.SelectedCommand}" CommandParameter="{Binding ElementName=list}" VerticalAlignment="Center" Margin="10 10 70 10" Height="50" Width="50" BorderBrush="Gray">
+                            <Button HorizontalAlignment="Right" Command="{Binding ElementName=uvm, Path=DataContext.SelectedCommand}" CommandParameter="{Binding}" VerticalAlignment="Center" Margin="10 10 70 10" Height="50" Width="50" BorderBrush="Gray">
                                 <Button.Content>
                                     <Image Source="{Binding isChecked}" HorizontalAlignment="Center" VerticalAlignment="Center" Height="27" Width="27"/>
                                 </Button.Content>    
