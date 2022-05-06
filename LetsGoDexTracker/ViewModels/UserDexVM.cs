@@ -26,7 +26,7 @@ namespace LetsGoDexTracker.ViewModels
                 {
                     selectedPokemon = value;
                     OnPropertyChanged("SelectedPokemon");
-         
+                //    SwapMarks();
                 }
             }
         }

@@ -22,12 +22,8 @@ namespace LetsGoDexTracker.ViewModels.Commands
 
         public bool CanExecute(object parameter)
         {
-            Pokemon selected = parameter as Pokemon;
-            if(selected != null)
-            {
-                return true;
-            }
-            return false;
+
+            return true;
         }
 
         public void Execute(object parameter)
