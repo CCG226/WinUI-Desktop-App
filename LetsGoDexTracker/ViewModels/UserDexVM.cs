@@ -34,7 +34,10 @@ namespace LetsGoDexTracker.ViewModels
         public UserDexVM()
         {
             myPokedex = PokemonDataAccess.Dex;
+            
             SelectedCommand = new SelectedCommand(this);
+           
+            
             foreach(Pokemon p in myPokedex)
             {
                 if(p.isChecked == "/Assets/isChecked.png")
@@ -72,8 +75,11 @@ namespace LetsGoDexTracker.ViewModels
                   
                 }
             }
+          
             OnPropertyChanged("myPokedex");
+           
             CaughtText = $"Pokedex Count: {CaughtSoFar}/171";
+           
             PokemonDataAccess.DataUpdate(pokemon);
         }
 

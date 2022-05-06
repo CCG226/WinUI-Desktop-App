@@ -16,10 +16,11 @@ namespace LetsGoDexTracker.Service
 
     public class PokemonDataAccess
     {
-        public static string READ = "SELECT ID, DexID, captured, Name, Image, PrimaryType, SecondaryType, Entry, location, LevelUp, Height, Weight, Abilities1, Abilities2, Hidden, Category, Availability, HP, Attack, Defense, SpA, SpD, Speed, Total  from [pokedex]";
+        public const string READ = "SELECT ID, DexID, captured, Name, Image, PrimaryType, SecondaryType, Entry, location, LevelUp, Height, Weight, Abilities1, Abilities2, Hidden, Category, Availability, HP, Attack, Defense, SpA, SpD, Speed, Total  from [pokedex]";
       
-         
+        public const string WRITE = $"UPDATE [pokedex] SET captured = @check WHERE ID = @id";
 
+       
         public static ObservableCollection<Pokemon> Dex = new ObservableCollection<Pokemon>();
 
         public static void DataAccess()
@@ -30,8 +31,10 @@ namespace LetsGoDexTracker.Service
             using (SqliteConnection db = new SqliteConnection($"Filename={dbpath}"))
             {
                 db.Open();
+               
                 SqliteCommand insert = new SqliteCommand(READ, db);
                 SqliteDataReader query = insert.ExecuteReader();
+               
                 while (query.Read())
                 {
                     Dex.Add(new Pokemon() { 
@@ -81,15 +84,16 @@ namespace LetsGoDexTracker.Service
             {
                 db.Open();
                 SqliteCommand insertCommand = new SqliteCommand();
+               
                 insertCommand.Connection = db;
 
-                string WRITE = $"UPDATE [pokedex] SET captured = @check WHERE ID = @id";
                 insertCommand.CommandText = WRITE;
+               
                 insertCommand.Parameters.AddWithValue("@check", pokemon.isChecked);
                 insertCommand.Parameters.AddWithValue("@id", pokemon.Id);
+              
                 insertCommand.ExecuteReader();
             
-             
                 db.Close();
             }
         }
