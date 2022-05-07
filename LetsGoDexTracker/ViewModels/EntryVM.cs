@@ -70,7 +70,7 @@ namespace LetsGoDexTracker.ViewModels
         {
             get
             {
-                if(pokemonEntry.Abilities1 == "NULL")
+                if(pokemonEntry.Abilities1 != "")
                 {
                     return pokemonEntry.Abilities1;
                 }
@@ -82,7 +82,7 @@ namespace LetsGoDexTracker.ViewModels
         {
             get
             {
-                if (pokemonEntry.Abilities2 == "NULL")
+                if (pokemonEntry.Abilities2 != "")
                 {
                     return pokemonEntry.Abilities2;
                 }
@@ -94,7 +94,7 @@ namespace LetsGoDexTracker.ViewModels
         {
             get
             {
-                if(pokemonEntry.Hidden == "NULL")
+                if(pokemonEntry.Hidden != "")
                 {
                     return PokemonEntry.Hidden;
                 }
@@ -109,9 +109,9 @@ namespace LetsGoDexTracker.ViewModels
                 {
                     return "Evolves at " + pokemonEntry.Evolve;
                 }
-                else if(pokemonEntry.Evolve == "NULL")
+                else if(pokemonEntry.Evolve == "")
                 {
-                    return null;
+                    return " ";
                 }
                 else
                 {

@@ -33,7 +33,7 @@
         <Button Command="{Binding RoutingCommand}" CommandParameter="Viridian Forest"  Height="18" Margin="152,169,0,0" VerticalAlignment="Top" Width="19"  Opacity="0" ToolTipService.ToolTip="Viridian Forest"/>
         <Button Command="{Binding RoutingCommand}" CommandParameter="Route 2"  Height="48" Margin="156,188,0,0" VerticalAlignment="Top" Width="11"  Opacity="0" ToolTipService.ToolTip="Route 2"/>
         <Button Command="{Binding RoutingCommand}" CommandParameter="Route 1"  Height="53" Margin="155,260,0,0" VerticalAlignment="Top" Width="16"  Opacity="0" ToolTipService.ToolTip="Route 1"/>
-        <Button Command="{Binding RoutingCommand}" CommandParameter="Starter"  Height="22" Margin="152,313,0,0" VerticalAlignment="Top" Width="21"  Opacity="0" ToolTipService.ToolTip="Pallet Town"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Pallet Town"  Height="22" Margin="152,313,0,0" VerticalAlignment="Top" Width="21"  Opacity="0" ToolTipService.ToolTip="Pallet Town"/>
         <Button Command="{Binding RoutingCommand}" CommandParameter="Route 21"  Height="22" Margin="149,411,0,0" VerticalAlignment="Top" Width="21"  Opacity="0" ToolTipService.ToolTip="Route 21"/>
         <Button Command="{Binding RoutingCommand}" CommandParameter="Cinnabar Island"  Height="71" Margin="155,335,0,0" VerticalAlignment="Top" Width="14"  Opacity="0" ToolTipService.ToolTip="Cinnabar Island"/>
         <Button Command="{Binding RoutingCommand}" CommandParameter="Route 20"  Height="16" Margin="174,411,0,0" VerticalAlignment="Top" Width="44"  Opacity="0" ToolTipService.ToolTip="Route 20"/>
