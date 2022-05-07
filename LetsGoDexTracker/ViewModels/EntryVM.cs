@@ -21,7 +21,7 @@ namespace LetsGoDexTracker.ViewModels
         {
             get
             {
-                if(PokemonEntry.SecondaryType == "NULL")
+                if(PokemonEntry.SecondaryType == "")
                 {
                     return "White";
                 }
