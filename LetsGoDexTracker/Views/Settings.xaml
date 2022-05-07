@@ -9,6 +9,10 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
+        <StackPanel>
+            <TextBlock Text="Credit:" FontWeight="Bold" FontSize="25"  HorizontalAlignment="Center"/>
+            <TextBlock FontSize="15" HorizontalAlignment="Center" Text="Pokémon © 2002-2022 Pokémon. © 1995-2022 Nintendo/Creatures Inc./GAME FREAK inc. TM, ® and Pokémon character names are trademarks of Nintendo."/>
+            <TextBlock FontSize="15" HorizontalAlignment="Center" Text="Images From Bulbapedia" />
+        </StackPanel>
     </Grid>
 </Page>

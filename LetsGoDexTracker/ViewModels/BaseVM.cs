@@ -85,6 +85,7 @@ namespace LetsGoDexTracker.ViewModels
             }
             else if (newArea.Contains("Route"))
             {
+                newArea = newArea + ",";
                 SelectedArea = "Available Pokemon on " + newArea + ":";
             }
             else

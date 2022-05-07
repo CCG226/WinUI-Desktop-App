@@ -20,12 +20,12 @@
         </Grid.ColumnDefinitions>
 
         <Image Source="/Assets/kanto.png" MinHeight="100" MinWidth="100" MaxHeight="425" MaxWidth="425" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,51,0,0"/>
-        <TextBlock HorizontalAlignment="Left" Height="36" Margin="85,10,0,0" TextWrapping="Wrap" Text="Interactive Map Of Kanto (click a location on the map!)" VerticalAlignment="Top" Width="auto"/>
+        <TextBlock HorizontalAlignment="Left" Height="36" Margin="85,10,0,0" TextWrapping="Wrap" Text="Interactive Map Of Kanto:" VerticalAlignment="Top" Width="auto"/>
         <TextBlock Height="29" Margin="691,10,-356,0" TextWrapping="Wrap" Text="{Binding SelectedArea}" VerticalAlignment="Top" RenderTransformOrigin="0.497,0.457"/>
         <Button Command="{Binding RoutingCommand}" CommandParameter="Indigo Plateau" Height="25" Margin="100,90,0,0" VerticalAlignment="Top" Width="23" Opacity="0" ToolTipService.ToolTip="Indigo Plateau"/>
         <Button Command="{Binding RoutingCommand}" CommandParameter="Victory Road" Height="48" Margin="103,115,0,0" VerticalAlignment="Top" Width="20"  Opacity="0" ToolTipService.ToolTip="Victory Road"/>
         <Button Command="{Binding RoutingCommand}" CommandParameter="Route 23" Height="79" Margin="103,163,0,0" VerticalAlignment="Top" Width="20"  Opacity="0" ToolTipService.ToolTip="Route 23"/>
-        <Button Command="{Binding RoutingCommand}" CommandParameter="Rpute 22"  Height="16" Margin="103,242,0,0" VerticalAlignment="Top" Width="44"  Opacity="0" ToolTipService.ToolTip="Route 22"/>
+        <Button Command="{Binding RoutingCommand}" CommandParameter="Route 22"  Height="16" Margin="103,242,0,0" VerticalAlignment="Top" Width="44"  Opacity="0" ToolTipService.ToolTip="Route 22"/>
         <Button Command="{Binding RoutingCommand}" CommandParameter="Viridian City"  Height="19" Margin="0,241,430,0" VerticalAlignment="Top" Width="18" RenderTransformOrigin="0.56,0.437" HorizontalAlignment="Right"  Opacity="0" ToolTipService.ToolTip="Viridian City"/>
         <Button Command="{Binding RoutingCommand}" CommandParameter="Pewter City"  Height="23" Margin="152,117,0,0" VerticalAlignment="Top" Width="23"  Opacity="0" ToolTipService.ToolTip="Pewter City"/>
         <Button Command="{Binding RoutingCommand}" CommandParameter="Diglett's Cave"  Height="23" Margin="177,142,0,0" VerticalAlignment="Top" Width="21"  Opacity="0" ToolTipService.ToolTip="Diglett's Cave"/>
@@ -100,6 +100,6 @@
     
         <Button Command="{Binding RoutingCommand}" CommandParameter="Kanto" Content="Select Entire Region" Background="CadetBlue" Foreground="Snow" Height="33" Margin="88,449,0,0" VerticalAlignment="Top" Width="150"/>
         <SymbolIcon Symbol="Help" Margin="420,449,0,0" VerticalAlignment="Top" Foreground="Black" ToolTipService.ToolTip="Click a location on the map to get local pokemon data"/>
-        <SymbolIcon Symbol="Help" Margin="906,7,-912,0" VerticalAlignment="Top" Foreground="Firebrick" ToolTipService.ToolTip="Select a pokemon to get pokedex data"/>
+        <SymbolIcon Symbol="Help" Margin="906,7,-1042,0" VerticalAlignment="Top" Foreground="Firebrick" ToolTipService.ToolTip="Select a pokemon to get pokedex data"/>
     </Grid>
 </Page>
