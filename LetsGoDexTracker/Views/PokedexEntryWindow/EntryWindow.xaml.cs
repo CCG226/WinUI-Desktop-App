@@ -29,7 +29,7 @@ namespace LetsGoDexTracker.Views.PokedexEntryWindow
         {
             this.InitializeComponent();
 
-            EntryVM.PokemonEntry = pokemon;
+            EntryVM.PokemonEntry = pokemon; //set static property for the pokemon object in the entry window view model to the pokemon object selected by the user on the grid view 
         }
     }
 }

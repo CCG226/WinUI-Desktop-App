@@ -9,9 +9,9 @@ namespace LetsGoDexTracker.ViewModels.DataAccess
     public class TypeLookUpChart
     {
 
-        public static string TypeBubble(string pokemonsType) 
+        public static string TypeBubble(string pokemonsType) //parameter = pokemon records primary/secondary type field
         {
-            var typecolor = pokemonsType switch
+            var typecolor = pokemonsType switch//switch expression that turns a type name into a color for dyanmic color backgrounds for pokedex entries 
             {
                 nameof(TypeEnums.Normal) => "Tan",
                 nameof(TypeEnums.Fighting) => "Firebrick",

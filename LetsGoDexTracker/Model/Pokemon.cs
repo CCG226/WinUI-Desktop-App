@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LetsGoDexTracker.PokemonModel
 {
-    public class Pokemon
+    public class Pokemon//pokemon object, based on the pokemon record from the pokedex table in the database
     {
         public int Id { get; set; }
         

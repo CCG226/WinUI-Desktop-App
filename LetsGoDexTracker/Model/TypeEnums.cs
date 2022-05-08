@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LetsGoDexTracker.Model
 {
-    public enum TypeEnums 
+    public enum TypeEnums //list of pokemon types 
     {
       Normal,
       Fighting,

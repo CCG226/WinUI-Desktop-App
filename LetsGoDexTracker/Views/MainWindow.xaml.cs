@@ -36,12 +36,12 @@ namespace LetsGoDexTracker
            
         }
 
-        private double NavViewCompactModeThresholdWidth { get { return Nav.CompactModeThresholdWidth; } }//binds with XAML Mainwindow
-        private readonly List<(string Tag, Type Page)> _pages = new List<(string Tag, Type Page)>
-        { };
+        private double NavViewCompactModeThresholdWidth { get { return Nav.CompactModeThresholdWidth; } }//binds to the Main Window
+        private readonly List<(string Tag, Type Page)> _pages = new List<(string Tag, Type Page)>();//list of navigation pages 
+      
         private void NavigationView_Loaded(object sender, RoutedEventArgs e)
         {
-            // You can also add items in code.
+           //create Navigate tables with symbols and names and tags to identify them upon main window load in 
             ((NavigationView)sender).IsPaneOpen = false;
             Nav.MenuItems.Add(new muxc.NavigationViewItemSeparator());
             Nav.MenuItems.Add(new muxc.NavigationViewItem
@@ -70,7 +70,7 @@ namespace LetsGoDexTracker
             Nav.MenuItems.Add(new muxc.NavigationViewItemSeparator());
             ContentFrame.Navigated += On_Navigated;
 
-            // NavView doesn't load any page by default, so load home page.
+            //default page loaded into will be home page!!!
             Nav.SelectedItem = Nav.MenuItems[0];
             NavigationView_Navigate("home", new Microsoft.UI.Xaml.Media.Animation.EntranceNavigationTransitionInfo());
             
@@ -78,11 +78,11 @@ namespace LetsGoDexTracker
         private void NavigationView_ItemInvoked(muxc.NavigationView sender,
                               muxc.NavigationViewItemInvokedEventArgs args)
         {
-            if (args.IsSettingsInvoked == true)
+            if (args.IsSettingsInvoked == true)//if settings clicked 
             {
                 NavigationView_Navigate("settings", args.RecommendedNavigationTransitionInfo);
             }
-            else if (args.InvokedItemContainer != null)
+            else if (args.InvokedItemContainer != null)//if other tab clicked transition their via tag
             {
                 var navItemTag = args.InvokedItemContainer.Tag.ToString();
                 NavigationView_Navigate(navItemTag, args.RecommendedNavigationTransitionInfo);
@@ -91,20 +91,19 @@ namespace LetsGoDexTracker
         private void NavigationView_Navigate(string navItemTag, Microsoft.UI.Xaml.Media.Animation.NavigationTransitionInfo transitionInfo)
         {
             Type _page = null;
-            if (navItemTag == "settings")
+            if (navItemTag == "settings")//navigate to settings page 
             {
                 _page = typeof(Settings);
             }
-            else
+            else//navigate to tab page selected
             {
                 var item = _pages.FirstOrDefault(p => p.Tag.Equals(navItemTag));
                 _page = item.Page;
             }
-            // Get the page type before navigation so you can prevent duplicate
-            // entries in the backstack.
-            var preNavPageType = ContentFrame.CurrentSourcePageType;
+            
+            var preNavPageType = ContentFrame.CurrentSourcePageType;//store previous page to prevent duplicatation
 
-            // Only navigate if the selected page isn't currently loaded.
+            // handles exception 
             if (!(_page is null) && !Type.Equals(preNavPageType, _page))
             {
                 ContentFrame.Navigate(_page, null, transitionInfo);
@@ -113,35 +112,34 @@ namespace LetsGoDexTracker
 
         private void NavigationView_BackRequested(muxc.NavigationView sender, muxc.NavigationViewBackRequestedEventArgs args)
         {
-            TryGoBack();
+            TryGoBack();//go back if back arrow clicked to previous page 
         }
         private bool TryGoBack()
         {
-            if (!ContentFrame.CanGoBack)
+            if (!ContentFrame.CanGoBack)//can we go Back?
                 return false;
 
-            // Don't go back if the nav pane is overlayed.
             if (Nav.IsPaneOpen && (Nav.DisplayMode == muxc.NavigationViewDisplayMode.Compact || Nav.DisplayMode == muxc.NavigationViewDisplayMode.Minimal))
                 return false;
 
-            ContentFrame.GoBack();
+            ContentFrame.GoBack();//g back if a page has already been visited 
             return true;
         }
         private void ContentFrame_NavigationFailed(object sender, NavigationFailedEventArgs e)
         {
-            throw new Exception("Failed to load Page " + e.SourcePageType.FullName);
+            throw new Exception("Failed to load Page " + e.SourcePageType.FullName);//failed to load a page
         }
-        private void On_Navigated(object sender, NavigationEventArgs e)
+        private void On_Navigated(object sender, NavigationEventArgs e)//trggered when navigation event occurs aka when user clicks settings/page
         {
-            Nav.IsBackEnabled = ContentFrame.CanGoBack;
+            Nav.IsBackEnabled = ContentFrame.CanGoBack;//we've navigated so we can go back to prev page 
 
             if (ContentFrame.SourcePageType == typeof(Settings))
             {
-                // SettingsItem is not part of NavView.MenuItems, and doesn't have a Tag.
+                //if setting
                 Nav.SelectedItem = (muxc.NavigationViewItem)Nav.SettingsItem;
               
             }
-            else if (ContentFrame.SourcePageType != null)
+            else if (ContentFrame.SourcePageType != null)//if other tab 
             {
                 var item = _pages.FirstOrDefault(p => p.Page == e.SourcePageType);
 

@@ -18,7 +18,7 @@ namespace LetsGoDexTracker.ViewModels.Commands
         {
             VM = vm;
         }
-        public event EventHandler CanExecuteChanged;
+        public event EventHandler CanExecuteChanged;//occurs when command change is noticed 
 
         public bool CanExecute(object parameter)
         {
