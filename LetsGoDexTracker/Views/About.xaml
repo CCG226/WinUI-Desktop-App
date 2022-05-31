@@ -10,7 +10,7 @@
     <Grid>
         <StackPanel>
             <TextBlock Text="About" FontWeight="ExtraBold" FontSize="50" HorizontalAlignment="Center"/>
-            <TextBlock FontSize="25" HorizontalAlignment="Center" Text="Overall Purpose:" FontWeight="Bold"/>
+            <TextBlock FontSize="25" HorizontalAlignment="Center" Text="Purpose:" FontWeight="Bold" Margin="0 100 0 0"/>
             <TextBlock FontSize="25" HorizontalAlignment="Center" Text="This Application was designed to help you complete the National Pokedex for Pokemon Lets Go Eevee and"/>
             <TextBlock FontSize="25" HorizontalAlignment="Center" Text="Lets Go Pikachu by allowing you to discover where pokemon are located with the interactive map, keep "/>
             <TextBlock FontSize="25" HorizontalAlignment="Center" Text="track of the pokemon you've caught so far, and look at pokedex data."/>

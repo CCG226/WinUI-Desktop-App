@@ -19,7 +19,7 @@
                         <ResourceDictionary x:Key="Default">
                             <LinearGradientBrush x:Key="NavigationViewTopPaneBackground"
                                      StartPoint="0.5,0" EndPoint="0.5,1">
-                                <GradientStop Color="Firebrick" Offset="0.0" />
+                                <GradientStop Color="Firebrick" Offset="0.05" />
                                 <GradientStop Color="Snow" Offset="1.0" />
                             </LinearGradientBrush>
                             <LinearGradientBrush x:Key="NavigationViewExpandedPaneBackground"
